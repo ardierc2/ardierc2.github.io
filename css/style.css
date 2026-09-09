@@ -1,0 +1,42 @@
+/* Header and top level heading styling and color of my choice */
+header {
+    text-align:  center;
+}
+
+body header h1 {
+    display: inline-block;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 900;
+    
+    background-color: rgb(39, 64, 101);
+    color: white;
+
+    padding: 5px 1em 0px 1em;
+
+    border-radius: .75em;
+    border-width: 10px;
+    border-color: white;;
+    border-style: double;
+}
+
+#header-name {
+    font-family: 'Indie Flower';
+    font-weight: 300;
+}
+
+
+/* Cards centered on page */
+.cards{
+    text-align: center;
+}
+
+.cards ul {
+    list-style: none;
+}
+
+
+/* Footer forced to bottom of page */
+footer {
+    position: absolute;
+    bottom: 2px;
+}
