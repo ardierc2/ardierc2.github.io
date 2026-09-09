@@ -1,0 +1,76 @@
+
+/* 1: remove bullet points and arrange the list items horizontally */
+ul {
+    display: flex;
+    list-style: none;
+
+    margin: 0;  /* I was bugged by the odd positioning with the default margins and padding */
+    padding: 0;
+}
+
+/* 2: change the background color of the li to a color of choosing and ensure text remains readable */
+li {
+    background-color: rgb(16, 16, 110);
+    color: white;
+}
+
+/* 3a: Enlarges the area of the list items on the left and right sides by 30px using the margins */
+/* li {
+    margin-left: 30px;
+    margin-right: 30px;
+} */
+
+/* 3b: Enlarges the area of the list items on the left and right sides by 30em using the margins */
+/* li { 
+    margin-left: 30em;
+    margin-right: 30em;
+} */
+
+/* 4a: Enlarges the area of the list items on the left and right sides by 30px using the padding*/
+/* li {
+    padding-left: 30px;
+    padding-right: 30px;
+} */
+
+/* 4b: Enlarges teh area of the list items on the left and right sides by 30em using the padding*/
+/* li {
+    padding-left: 30em;
+    padding-right: 30em;
+} */
+
+/* 4c: Self chosen padding */
+ li {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+/* 5: Rule to move the paragraph in the footer to the right side of the screen */
+footer p {
+    position: absolute;
+    right: 10px;
+}
+
+/* 6: Adjust Height and Width of img to 400x400 */
+div img {
+    max-height: 400px;
+    max-width: 400px;
+}
+
+/* 6: Could also be asking to adjust height to exactly 400x400 but this looks... square. */
+/* div img {
+    width: 400px;
+    height: 400px;
+} */
+
+
+/* 7: Rules to cause the span element to be placed on top of the img's lower right corner */
+body div {
+    position: relative;     /* non-static parent for absolute position in span */
+    display: inline-block;  /* causes dive container to shrink to the size of the img */
+}
+span {
+    position: absolute;     /* absolute position requires a non-static parent to position from */
+    bottom: 10px;
+    right: 10px;
+    color: white;
+}
