@@ -1,7 +1,7 @@
 
 /* 1: remove bullet points and arrange the list items horizontally */
 ul {
-    display: flex;
+    display: flex;  /* could also use display: inline on the li element instead there are just visible spaces between each item*/
     list-style: none;
 
     margin: 0;  /* I was bugged by the odd positioning with the default margins and padding */
@@ -56,7 +56,7 @@ div img {
     max-width: 400px;
 }
 
-/* 6: Could also be asking to adjust height to exactly 400x400 but this looks... square. */
+/* 6: Could also be asking to adjust height to exactly 400x400 but this looks... square and squished. */
 /* div img {
     width: 400px;
     height: 400px;
