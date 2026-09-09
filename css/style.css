@@ -20,6 +20,7 @@ body header h1 {
 }
 
 #header-name {
+    display: inline-block;
     font-family: 'Indie Flower';
     font-weight: 300;
 }
