@@ -1,3 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Helps with forcing footer to the bottom */
+html, body{
+    min-height: 100vh;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Header and top level heading styling and color of my choice */
 header {
     text-align:  center;
@@ -27,14 +40,14 @@ body header h1 {
 
 
 /* Cards centered on page */
-.cards{
+.project-cards{
     text-align: center;
 }
 
+
 /* Footer forced to bottom of page */
 footer {
-    position: absolute;
-    bottom: 2px;
+    margin-top: auto;
 
     color: rgb(21, 83, 133);
 }
