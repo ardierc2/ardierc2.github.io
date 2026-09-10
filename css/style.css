@@ -31,11 +31,6 @@ body header h1 {
     text-align: center;
 }
 
-.cards ul {
-    list-style: none;
-}
-
-
 /* Footer forced to bottom of page */
 footer {
     position: absolute;
