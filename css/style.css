@@ -39,11 +39,31 @@ body header h1 {
 }
 
 
-/* Cards centered on page */
+/* Cards centered on page and styled*/
 .project-cards{
-    margin-top: auto;
-    margin-bottom: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto 10vw auto 10vw;
+}
+
+.card {
+    width: max-content;
+    margin: 12px 12px 12px 12px;
+    padding: 1em;
     text-align: center;
+
+    background-color: rgb(222, 233, 255);
+    color: rgb(39, 64, 101);
+
+    border-color: rgb(39, 64, 101);
+    border-radius: .75em;
+    border-style: double;
+    border-width: 10px;
+
+    font-size: large;
+    font-weight: 900;
 }
 
 
