@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+}
+section {
+    background-color: rgb(24, 35, 54);
+    color: white;
+    padding: 0;
+    border-radius: 1em;
+    margin: 50px;
+}
+
+section h2 {
+    padding: 25px;
+    padding-bottom:5px;
+}
+
+a:link {
+    color: rgb(213, 223, 255);
+}
+a:visited {
+    color: rgb(231, 179, 255);
+}
+
+.content {
+    background-color: rgb(35, 48, 71);
+    color: white;
+    padding: 25px;
+    border-radius: 1em;
+}
+
+h3 {
+    padding:0;
+    margin: 0;
+}
