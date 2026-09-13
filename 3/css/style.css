@@ -6,7 +6,7 @@ header {
     text-align: center;
 }
 section {
-    background-color: rgb(24, 35, 54);
+    background-color: #1b263b;
     color: white;
     padding: 0;
     border-radius: 1em;
@@ -18,15 +18,15 @@ section h2 {
     padding-bottom:5px;
 }
 
-a:link {
-    color: rgb(213, 223, 255);
-}
 a:visited {
+    color: hsl(218, 100%, 80%);
+}
+a:link {
     color: rgb(231, 179, 255);
 }
 
 .content {
-    background-color: rgb(35, 48, 71);
+    background-color: #21304e;
     color: white;
     padding: 25px;
     border-radius: 1em;
