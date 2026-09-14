@@ -18,10 +18,10 @@ section h2 {
     padding-bottom:5px;
 }
 
-a:visited {
+a:link {
     color: hsl(218, 100%, 80%);
 }
-a:link {
+a:visited {
     color: rgb(231, 179, 255);
 }
 
@@ -35,4 +35,16 @@ a:link {
 h3 {
     padding:0;
     margin: 0;
+}
+
+ol {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+ol li {
+    position:relative;
+    margin: 0 20px;
+    right: 2em;
 }
