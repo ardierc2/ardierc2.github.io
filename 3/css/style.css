@@ -6,10 +6,6 @@
 }
 
 @media (min-width: 0px) and (max-width: 500px) {
-    header {
-    text-align: center;
-    color: #183c33;
-    }
     section {
         background-color: #527153;
         color: white;
@@ -19,10 +15,7 @@
 }
 
 @media (min-width: 501px) {
-    header {
-        text-align: center;
-        color: #183c33;
-    }
+    
     section {
         background-color: #527153;
         color: white;
@@ -31,6 +24,11 @@
         margin: 50px;
     }
 }
+
+header {
+        text-align: center;
+        color: #183c33;
+    }
 
 hr {
     color: #527153;

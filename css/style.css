@@ -21,8 +21,7 @@ body header h1 {
     font-family:'Courier New', Courier, monospace;
     font-weight: 900;
     
-    background-color: rgb(39, 64, 101);
-    color: white;
+    color: #183c33;
 
     padding: 5px 1em 0px 1em;
 
@@ -30,6 +29,15 @@ body header h1 {
     border-width: 10px;
     border-color: white;
     border-style: double;
+}
+
+hr {
+    color: #527153;
+    margin: 0 20%;
+    height: 3px;
+    background-color: #527153; 
+    border-radius: 1em;
+    border-style: hidden;
 }
 
 #header-name {
@@ -54,13 +62,13 @@ body header h1 {
     padding: 1em;
     text-align: center;
 
-    background-color: rgb(222, 233, 255);
-    color: rgb(39, 64, 101);
+    background-color: #f1f3ea;
+    color: #183c33;
 
-    border-color: rgb(39, 64, 101);
+    border-color: #527153;
     border-radius: .75em;
-    border-style: double;
-    border-width: 10px;
+    border-style: solid;
+    border-width: 3px;
 
     font-size: large;
     font-weight: 900;
@@ -71,7 +79,8 @@ body header h1 {
 
 /* Footer forced to bottom of page */
 footer {
-    margin-top: auto;
-
-    color: rgb(21, 83, 133);
+    text-align:center;
+    margin-top:auto;
+    padding-right: 24px;
+    color: #183c33;
 }
