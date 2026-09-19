@@ -1,20 +1,36 @@
 * {
     box-sizing: border-box;
-    max-width: 900px;
+    max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
 }
 
-header {
+@media (min-width: 0px) and (max-width: 500px) {
+    header {
     text-align: center;
+    }
+    section {
+        background-color: #1b263b;
+        color: white;
+        padding: 0;
+        border-radius: 1em;
+    }
 }
-section {
-    background-color: #1b263b;
-    color: white;
-    padding: 0;
-    border-radius: 1em;
-    margin: 50px;
+
+@media (min-width: 501px) {
+    header {
+        text-align: center;
+    }
+    section {
+        background-color: #1b263b;
+        color: white;
+        padding: 0;
+        border-radius: 1em;
+        margin: 50px;
+    }
 }
+
+
 
 section h2 {
     padding: 25px;
@@ -49,7 +65,7 @@ ol {
 }
 
 ol li {
-    position:relative;
+    position: relative;
     margin: 0 20px;
     right: 2em;
 }
