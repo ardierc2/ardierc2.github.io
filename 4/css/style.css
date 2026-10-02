@@ -21,6 +21,13 @@ body {
 <<<<<<<<<<<<<<<<<<<<<<<<<<<< 
 */
 
+a:link {
+    color: hsl(218, 100%, 80%);
+}
+a:visited {
+    color: rgb(231, 179, 255);
+}
+
 .silent-link:link, .silent-link:visited{
     color: white;
     text-decoration: none;
@@ -28,10 +35,6 @@ body {
 
 .silent-link:hover, .silent-link:active, .silent-link:focus-visible {
     text-decoration: underline solid;
-}
-
-footer a:link, footer a:visited {
-    color: orange;
 }
 
 .glow {
