@@ -126,6 +126,55 @@ footer a:link, footer a:visited {
 
 /* 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    Problem Information 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+*/
+
+.problem-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 1em;
+    padding: 0;
+    list-style: none;
+}
+
+.problem-card {
+    margin: 10px 20px;
+    padding: 20px;
+    font-size: 1.25rem;
+    border-radius: 1em;
+    background-color: #1f262b;
+}
+
+.problem-statement {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.problem-details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.problem-details img {
+    width: 300px;
+    height: 300px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 1em;
+    border: 2px solid #3f4055;
+}
+
+/* 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
          Navigation 
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
 */
@@ -203,35 +252,6 @@ footer a:link, footer a:visited {
 
 .nav-link:hover,.nav-link:active {
     color: orange;
-}
-
-/* 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-            Problem     
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
-*/
-
-.problem-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 2em 1em;
-    padding: 0;
-    list-style: none;
-}
-
-.problem-card {
-    margin: 10px 20px;
-    padding: 20px;
-    font-size: 1.25rem;
-    border-radius: 1em;
-    background-color: #1f262b;
-}
-
-.problem-statement {
-    font-size: 1.5rem;
-    font-weight: bold;
 }
 
 /* 
