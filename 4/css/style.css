@@ -203,7 +203,7 @@ figcaption {
 
 .light-card {
     margin:1em 0;
-    width: 100%;
+    width: 95%;
 }
 
 .light-card div {
@@ -231,7 +231,7 @@ figcaption {
 
 .dsm-card {
     display: flex;
-    width: 100%;
+    width: 95%;
 
     margin: 10px 0;
     padding: 24px;
@@ -242,17 +242,6 @@ figcaption {
     font-weight: bold;
 
     flex-direction: column;
-}
-
-.dsm-img-window {
-    width: 300px;
-    height: 300px;
-
-    object-fit: cover;
-    object-position: center;
-
-    border-radius: 1em;
-    border: 2px solid #3f4055;
 }
 
 
