@@ -119,6 +119,7 @@ figcaption a:visited {
 
 .button:hover,.button:active {
     background-color: rgba(63, 64, 85, 0.9);
+    text-decoration: underline solid orange;
 }
 
 .small-margin {
