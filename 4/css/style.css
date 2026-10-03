@@ -122,6 +122,10 @@ figcaption a:visited {
     text-decoration: underline solid orange;
 }
 
+.small-font {
+    font-size:medium;
+}
+
 .small-margin {
     margin: 5px;
 }
@@ -142,6 +146,10 @@ figure {
 
 figcaption {
     font-size:1rem;
+}
+
+.section-figure {
+    margin-top: 2em;
 }
 
 /* 
@@ -224,7 +232,7 @@ figcaption {
     
     border-radius: 1em;
     background-color: #1f262b;
-}
+} 
 
 /* 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -671,6 +679,10 @@ footer {
 
     .dsm-card {
         padding: 24px;
+    }
+
+    .small-font {
+        font-size:large;
     }
 
     
