@@ -134,6 +134,11 @@ figcaption a:visited {
     border: 2px solid #3f4055;
 }
 
+figure {
+    margin:0;
+    padding: 0;
+}
+
 figcaption {
     font-size:1rem;
 }
@@ -238,7 +243,7 @@ figcaption {
 
 .dsm-card {
     display: flex;
-    width: 95%;
+    width: 100%;
 
     margin: 10px 0;
     padding: 16px;
