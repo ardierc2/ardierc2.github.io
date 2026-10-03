@@ -215,33 +215,6 @@ figcaption {
     background-color: #1f262b;
 }
 
-.stat-value-emphasis {
-    font-size: 2rem;
-    font-weight: bold;
-    display: block;
-
-    color: orange;
-}
-
-.change {
-    color: orange;
-
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.change-small {
-    color: orange;
-    padding: 5px;
-
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.give-me-room {
-    padding: 50px 5px 25px 5px;
-}
-
 /* 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     Dark Sky Movement
