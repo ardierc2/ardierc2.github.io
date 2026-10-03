@@ -233,6 +233,12 @@ footer a:link, footer a:visited {
     display: flex;
     width: 100%;
 
+    background-color: #1f262b;
+    border-radius: 1em;
+    margin: 10px 0;
+    padding: 24px;
+
+
 
     flex-direction: column;
 }
@@ -432,17 +438,17 @@ footer {
         grid-row: span 2;
     }
 
-    .explore-card:nth-child(4) .explore-card-img{
+    .explore-card:nth-child(even) .explore-card-img{
         grid-column: 2;
         grid-row: span 2;
     }
 
-    .explore-card:nth-child(4) .explore-card-info{
+    .explore-card:nth-child(even) .explore-card-info{
         grid-column: 1;
         grid-row: 1;
     }
 
-    .explore-card:nth-child(4) .explore-card-button{
+    .explore-card:nth-child(even) .explore-card-button{
         grid-column: 1;
         grid-row: 2;
     }
