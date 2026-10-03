@@ -50,7 +50,7 @@ footer a:link, footer a:visited {
 
 .text-outline {
     /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/-webkit-text-stroke */
-    -webkit-text-stroke: 1px rgb(63, 64, 85);
+    -webkit-text-stroke: px rgb(63, 64, 85);
 }
 
 .double-underline-orange {
