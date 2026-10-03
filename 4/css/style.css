@@ -15,13 +15,17 @@ body {
     font-size: 1.33rem;
 }
 
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
 /* 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>
       Links and Other
 <<<<<<<<<<<<<<<<<<<<<<<<<<<< 
 */
-
-
 
 .silent-link:link, .silent-link:visited{
     color: white;
@@ -39,6 +43,23 @@ footer a:link, footer a:visited {
 .glow {
     text-shadow: 0 2px 75px white;
 }
+
+.silent-href:hover {
+    text-decoration: none;
+}
+
+.text-outline {
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/-webkit-text-stroke */
+    -webkit-text-stroke: 1px rgb(63, 64, 85);
+}
+
+.double-underline-orange {
+    text-decoration: underline double orange;
+}
+.underline-orange {
+    text-decoration: underline solid orange;
+}
+
 /* 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
             Layout 
@@ -64,6 +85,14 @@ footer a:link, footer a:visited {
     background-color: #3f4055;
 }
 
+.sub-section-bar {
+    width: 450px;
+    height: 3px;
+    border: 0;
+    border-radius: 1em;
+    background-color: orange;
+}
+
 .button {
     margin: 5px;
     padding: 10px 20px;
@@ -75,6 +104,10 @@ footer a:link, footer a:visited {
 
 .button:hover,.button:active {
     background-color: rgba(63, 64, 85, 0.9);
+}
+
+.small-margin {
+    margin: 5px;
 }
 
 /* 
@@ -110,7 +143,6 @@ footer a:link, footer a:visited {
 
 .change {
     color: orange;
-    padding: 50px 5px 25px 5px;
 
     font-size: 2rem;
     font-weight: bold;
@@ -124,6 +156,11 @@ footer a:link, footer a:visited {
     font-weight: bold;
 }
 
+.give-me-room {
+    padding: 50px 5px 25px 5px;
+}
+
+
 /* 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     Problem Information 
@@ -134,7 +171,9 @@ footer a:link, footer a:visited {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+
+    text-align: center;
     margin: 2em 1em;
     padding: 0;
     list-style: none;
@@ -162,7 +201,7 @@ footer a:link, footer a:visited {
     align-items: center;
 }
 
-.problem-details img {
+.img-window {
     width: 300px;
     height: 300px;
 
@@ -171,6 +210,56 @@ footer a:link, footer a:visited {
 
     border-radius: 1em;
     border: 2px solid #3f4055;
+}
+
+
+/* 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+           Explore  
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+*/
+
+.explore {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    margin: 2em 1em;
+}
+
+.explore-card {
+    display: flex;
+    width: 100%;
+
+
+    flex-direction: column;
+}
+
+.explore-card-img {
+    grid-row: span 2;
+}
+
+.explore-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+    padding: 10px;
+}
+
+.explore-card-button {
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 1em;
+
+    align-content: center;
+    
+    color: white;
+    text-decoration: none;
 }
 
 /* 
@@ -328,6 +417,34 @@ footer {
 
     .hero-title {
         font-size: 3.5rem;
+    }
+
+    .explore-card {
+        display: grid;
+        
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        
+        gap: 20px;
+    }
+
+    .explore-card-img {
+        grid-row: span 2;
+    }
+
+    .explore-card:nth-child(4) .explore-card-img{
+        grid-column: 2;
+        grid-row: span 2;
+    }
+
+    .explore-card:nth-child(4) .explore-card-info{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .explore-card:nth-child(4) .explore-card-button{
+        grid-column: 1;
+        grid-row: 2;
     }
 }
 
