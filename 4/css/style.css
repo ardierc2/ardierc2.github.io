@@ -402,7 +402,6 @@ footer a:link, footer a:visited {
 
     max-width: 906px;
     max-height:906px;
-    
     padding: 10px;
     margin-top: 5px;
     border-radius: 1em;
@@ -473,6 +472,10 @@ footer a:link, footer a:visited {
     font-family: 'Times New Roman', Times, serif;
     font-size: 3rem;
     text-shadow: 0 2px 75px rgba(59, 155, 207, 1);
+
+    text-decoration: underline solid orange;
+
+    -webkit-text-stroke: px rgb(63, 64, 85); /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/-webkit-text-stroke */
 }
 
 /* 
