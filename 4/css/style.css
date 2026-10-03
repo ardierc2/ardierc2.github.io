@@ -86,7 +86,15 @@ footer a:link, footer a:visited {
 }
 
 .sub-section-bar {
-    width: 450px;
+        width: 450px;
+        height: 3px;
+        border: 0;
+        border-radius: 1em;
+        background-color: orange;
+}
+
+.explore-bar {
+    width: 80%;
     height: 3px;
     border: 0;
     border-radius: 1em;
@@ -202,7 +210,7 @@ footer a:link, footer a:visited {
 }
 
 .img-window {
-    width: 300px;
+    min-width: 300px;
     height: 300px;
 
     object-fit: cover;
@@ -268,6 +276,16 @@ footer a:link, footer a:visited {
     text-decoration: none;
 }
 
+.explore-img-window {
+    width: 300px;
+    height: 300px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 1em;
+    border: 2px solid #3f4055;
+}
 /* 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
          Navigation 
