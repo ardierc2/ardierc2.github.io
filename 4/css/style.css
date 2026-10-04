@@ -331,7 +331,7 @@ figcaption {
 }
 
 .two-step-card:hover, .two-step-card:active{
-    transform:scale(1.075);
+    transform:scale(1.05);
 }
 
 /* 
@@ -682,6 +682,8 @@ figcaption {
 .animal-description h3 {
     text-align: center;
     font-size: 2rem;
+
+    margin-top: 2rem;
 }
 
 .animal-light-effect {
@@ -711,6 +713,16 @@ figcaption {
 .animal-quick-facts ul {
     list-style-position: inside; /* https://teamtreehouse.com/community/how-to-make-the-space-on-left-hand-side-go-away-along-with-the-bullet-points-for-li-elements-in-a-ul */
 }
+
+.animal-description h3 {
+    font-size: 2rem;
+    text-align: left;
+}
+
+.animal-description .sub-section-bar {
+    margin: 10px 0;
+}
+
 
 /* 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -896,20 +908,26 @@ footer {
         grid-row: 1 / span 2;
     }
 
-    .animal-description h3 {
-        font-size: 2rem;
-        text-align: left;
-    }
-
-    .animal-description .sub-section-bar {
-        margin: 10px 0;
-    }
 
     .animal-pic-info {
         display: grid;
 
         grid-template-columns: 1fr 1fr;
         gap: 20px;
+    }
+
+    .animal-range-map img{
+        width: 100%;
+        height: auto;
+    }
+
+    .explore-card-info {
+        font-size: 1.6rem;
+        font-weight:500
+    }
+
+    .explore-card-button {
+        font-size: 1.75rem;
     }
 }
 
@@ -986,4 +1004,8 @@ footer {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr;
     }
+
+    .two-step-card:hover, .two-step-card:active{
+    transform:scale(1.075);
+}
 }
