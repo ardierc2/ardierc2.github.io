@@ -701,7 +701,7 @@ figcaption {
 .animal-fun-fact {
     background-color: #1f262b;
     border-radius: 1em;
-    margin: 10px 0;
+    margin: 2em 0;
     padding: 24px;
     text-align:left;
 }
@@ -712,6 +712,10 @@ figcaption {
 
 .animal-quick-facts ul {
     list-style-position: inside; /* https://teamtreehouse.com/community/how-to-make-the-space-on-left-hand-side-go-away-along-with-the-bullet-points-for-li-elements-in-a-ul */
+}
+
+.animal-quick-facts ul li {
+    margin: 5px 0;
 }
 
 .animal-description h3 {
@@ -1006,6 +1010,6 @@ footer {
     }
 
     .two-step-card:hover, .two-step-card:active{
-    transform:scale(1.075);
-}
+        transform:scale(1.075);
+    }
 }
