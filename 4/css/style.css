@@ -321,8 +321,8 @@ figcaption {
     
 }
 
-.two-step-card img:hover, .two-step-card:active{
-    transform:scale(.95);
+.two-step-card:hover, .two-step-card:active{
+    transform:scale(1.075);
 }
 
 /* 
@@ -623,10 +623,11 @@ figcaption {
     object-position: bottom;
     /* Fixes the squishing of the image at odd aspect ratios */
     /* https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit */
+    /* I have further used this trick throughout the stylesheet */
 }
 
 .hero-title {
-    position: relative; /* keeps the title on top of the image */
+    position: relative;
     margin: 0;
     font-family: 'Times New Roman', Times, serif;
     font-size: 3rem;
