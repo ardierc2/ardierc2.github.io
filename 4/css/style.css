@@ -41,6 +41,8 @@ h2 {
     text-decoration: none;
 }
 
+
+
 footer a:link, footer a:visited {
     color: hsl(218, 100%, 80%);
 }
@@ -280,11 +282,11 @@ figcaption {
 
 /* 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-        Environments
+        Two-Step
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
 */
 
-.environment {
+.two-step {
     width: 100%;
 
     display: flex;
@@ -293,13 +295,15 @@ figcaption {
     align-items: center;
 }
 
-.environment-card {
+.two-step-card {
     width:auto;
+
+    align-content: flex-end;
 
     padding: 10px 20px;
     margin:1em;
 
-    font-size: 1.5em;
+    font-size: 1.25em;
 
     border-radius: 1em;
     background-color: #1f262b;
@@ -307,15 +311,7 @@ figcaption {
     border: 2px solid transparent;
 }
 
-.environment-card img {
-    min-height: 150px;
-
-    object-fit: cover;
-    object-position:center;
-}
-
-
-.environment-card:hover, .environment-card:active {
+.two-step-card:hover, .two-step-card:active {
     border-color: orange;
 }
 
@@ -738,17 +734,17 @@ footer {
         font-size:large;
     }
 
-    .environment-card {
-        font-size: 2rem;
+    .two-step-card {
+        font-size: 1.5rem;
     }
 
-    .environment-list {
+    .two-step-list {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
 
-    .environment-card {
+    .two-step-card {
         font-size: 1.75em;
     }
 }
@@ -796,11 +792,7 @@ footer {
         grid-row: 1;
     }
 
-    .environment-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-    }
+    
 }
 
 /* 
@@ -812,5 +804,11 @@ footer {
 @media (min-width: 1500px) {
     .section-bar {
         width: 1500px;
+    }
+
+    .two-step-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
     }
 }
