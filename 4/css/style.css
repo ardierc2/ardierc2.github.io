@@ -633,7 +633,7 @@ figcaption {
     background-color: #1f262b;
     border-radius: 1em;
     margin: 10px 0;
-    padding: 10px;
+    padding: 24px;
     text-align:left;
 
     flex-direction: column;
@@ -646,6 +646,8 @@ figcaption {
 
 .animal-quick-facts ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .animal-quick-facts li {
@@ -704,6 +706,10 @@ figcaption {
 
 .animal-fun-fact strong {
     color: orange;
+}
+
+.animal-quick-facts ul {
+    list-style-position: inside; /* https://teamtreehouse.com/community/how-to-make-the-space-on-left-hand-side-go-away-along-with-the-bullet-points-for-li-elements-in-a-ul */
 }
 
 /* 
@@ -889,16 +895,11 @@ footer {
         margin: 10px 0;
     }
 
-
     .animal-pic-info {
         display: grid;
 
         grid-template-columns: 1fr 1fr;
         gap: 20px;
-    }
-
-    .animal-quick-facts h3 {
-        font-size: 2.5rem;;
     }
 }
 
@@ -945,6 +946,17 @@ footer {
         grid-row: 1;
     }
 
+    .animal-quick-facts h3 {
+        font-size: 2rem;;
+    }
+
+    .animal-quick-facts ul li {
+        font-size: 1.25rem;
+    }
+
+    .animal-quick-facts ul strong {
+        font-size: 1.25rem;
+    }
     
 }
 
