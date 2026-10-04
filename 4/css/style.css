@@ -309,10 +309,20 @@ figcaption {
     background-color: #1f262b;
 
     border: 2px solid transparent;
+
 }
 
 .two-step-card:hover, .two-step-card:active {
     border-color: orange;
+}
+
+.two-step-card img {
+    border: none; /* I couldn't figure out why some of my card image borders were white and some werent, it was frustrating so I am just removing the border here */
+    
+}
+
+.two-step-card img:hover, .two-step-card:active{
+    transform:scale(.95);
 }
 
 /* 
