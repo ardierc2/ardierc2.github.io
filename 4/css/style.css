@@ -670,8 +670,8 @@ figcaption {
     flex-direction: column;
     gap: 10px;
 
-    background-color: #1f262b;
-    border-radius: 1em;
+    /* background-color: #1f262b;
+    border-radius: 1em; */
     margin: 10px 0;
     padding: 24px;
     text-align:left;
@@ -679,7 +679,31 @@ figcaption {
 
 .animal-description h3 {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
+}
+
+.animal-light-effect {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    background-color: #1f262b;
+    border-radius: 1em;
+    margin: 2em 10px;
+    padding: 24px;
+    text-align:left;
+}
+
+.animal-fun-fact {
+    background-color: #1f262b;
+    border-radius: 1em;
+    margin: 10px 0;
+    padding: 24px;
+    text-align:left;
+}
+
+.animal-fun-fact strong {
+    color: orange;
 }
 
 /* 
@@ -843,6 +867,28 @@ footer {
     .two-step-card {
         font-size: 1.75em;
     }
+
+    .animal-info {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 2fr;
+        gap: 20px;
+    }
+
+    .animal-description {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+
+    .animal-description h3 {
+        font-size: 2rem;
+        text-align: left;
+    }
+
+    .animal-description .sub-section-bar {
+        margin: 10px 0;
+    }
+
 
     .animal-pic-info {
         display: grid;
