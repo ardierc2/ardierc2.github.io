@@ -74,6 +74,9 @@ hr {
     font-weight: 900;
     text-decoration: none;
 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+
 }
 
 
@@ -83,4 +86,24 @@ footer {
     margin-top:auto;
     padding-right: 24px;
     color: #183c33;
+}
+
+
+
+/* Card hover and active states, messing around trying to learn more of the CSS transitions */
+.card:hover {
+    background-color: #adbe91;
+    color: #f1f3ea;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0);
+    transform: scale(1.1) translateY(-5px);
+
+    transition: background-color 0.2s ease, 
+                color 0.2s ease, 
+                transform 0.35s ease, 
+                box-shadow 0.35s ease; 
+}
+
+.card:active {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
