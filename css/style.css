@@ -97,8 +97,8 @@ footer {
 
     transition: background-color 0.2s ease, 
                 color 0.2s ease, 
-                transform 0.35s ease, 
-                box-shadow 0.35s ease; 
+                transform 0.2s ease, 
+                box-shadow 0.2s ease; 
 }
 
 .card:active {
