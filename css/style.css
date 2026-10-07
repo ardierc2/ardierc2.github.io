@@ -4,7 +4,9 @@
 
 /* Helps with forcing footer to the bottom */
 html, body{
+    background-color:#f2ebcf;
     min-height: 100vh;
+    font-family:'Courier New', Courier, monospace;
 }
 body {
     display: flex;
@@ -18,17 +20,10 @@ header {
 
 body header h1 {
     display: inline-block;
-    font-family:'Courier New', Courier, monospace;
     font-weight: 900;
-    
     color: #183c33;
 
     padding: 5px 1em 0px 1em;
-
-    border-radius: .75em;
-    border-width: 10px;
-    border-color: white;
-    border-style: double;
 }
 
 hr {
@@ -99,12 +94,12 @@ hr {
     text-decoration: none;
 
     transition: all .35s ease;
-
 }
 
 .card span {
     font-size: large;
     font-weight: 900;
+
 }
 
 .wip {
@@ -123,7 +118,7 @@ img {
 }
 
 footer a {
-    color: #727e36;
+    color: #7c7e4e;
 }
 
 
