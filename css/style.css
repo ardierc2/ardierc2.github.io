@@ -125,8 +125,8 @@ footer {
 
 /* Card hover and active states, messing around trying to learn more of the CSS transitions */
 .card:hover {
-    background-color: #adbe91;
-    transform: scale(1.1);
+    background-color: #d7e1c8;
+    transform: scale(1.075);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
 
 
