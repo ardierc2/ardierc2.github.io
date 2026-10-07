@@ -112,6 +112,18 @@ hr {
     color:#c88d02
 }
 
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 150px;
+
+    transform: translateY(10px);
+}
+
+footer a {
+    color: #727e36;
+}
+
 
 /* Footer forced to bottom of page */
 footer {
