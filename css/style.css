@@ -98,6 +98,8 @@ hr {
 
     text-decoration: none;
 
+    transition: all .35s ease;
+
 }
 
 .card span {
