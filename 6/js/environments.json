@@ -1,0 +1,480 @@
+{
+  "environments": [
+    {
+      "id": "urban",
+      "title": "Lights Out - Urban",
+      "name": "Urban",
+      "image": "img/Raccoon.jpg",
+      "alt": "A raccoon in an urban environment, attention fixed on something off camera.",
+      "heroImage": "img/UrbanSkyline.jpeg",
+      "heroAlt": "Urban skyline, fading into the stars at sunset.",
+      "animals": [
+        {
+          "id": "little-brown-bat",
+          "name": "Little Brown Bat",
+          "image": "img/LittleBrownBat.jpg",
+          "alt": "A little brown bat clenching a fence in broad daylight.",
+          "endpoint": {
+            "title": "Lights Out - Little Brown Bat",
+            "caption": "Little brown bat. Source: <a href=\"https://www.pexels.com/\">Pexels.com</a>",
+            "quick-facts":{
+              "size": "2.5-4 inches",
+              "weight": "5-14 grams",
+              "lifespan": "6-10 years; Some exceed 30 years.",
+              "status": "Least Concern globally; Endangered in the US",
+              "Range": "Much of Canada and the United States"
+            },
+            "adaptations": "Little brown bats use echolocation to navigate and find insects in darkness. The bats' large ears give them incredible echo location capabilities. This guides their movements as they fly and helps them locate food invisible to the eye in the dark of the night.",
+            "diet": "They are insectivores that forage after sunset, often over water. A bat can eat hundreds of small insects in a night.",
+            "role": "By consuming insects, little brown bats are part of the natural controls on insect populations. These bats are not the top of the food chain however. They are a food source for owls and hawks.",
+            "fun-fact": "Males consume their own body weight in food every day, nursing females can consume even more.",
+            "range-map": "../../img/LittleBrownBatRange.png",
+            "range-map-alt": "Range map for the little brown bat.",
+            "range-map-caption": "Little brown bat range map. <a href=\"https://commons.wikimedia.org/wiki/File:Distribution_of_Myotis_lucifugus.png\">A proietti</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0\">CC BY-SA 3.0</a>, via Wikimedia Commons",
+            "effect-title": "Light Pollution's Effect on Little Brown Bats",
+            "effect-description": "The little brown bat is especially susceptible to the effects of light pollution, as they can be confused as to when dusk actually begins, leading to major disruptions in their foraging and navigation patterns. Artifical lights concentrate insects around them, attracting bats and exposing them to predators.",
+            "back": "Back to Urban Environment"
+          }
+        },
+        {
+          "id": "raccoon",
+          "name": "Raccoon",
+          "image": "img/Raccoon.jpg",
+          "alt": "A raccoon observing something in the distance off camera.",
+          "endpoint": {
+            "title": "Lights Out - Raccoon",
+            "caption": "Raccoon. Source: <a href=\"https://www.pexels.com/\">Pexels.com</a>",
+            "quick-facts": {
+              "size": "16-28 inches, plus tail",
+              "weight": "8-20 pounds",
+              "lifespan": "Often 2-3 years in the wild",
+              "status": "Least Concern",
+              "Range": "Canada, the United States, and Central America"
+            },
+            "adaptations": "Raccoons are well equipped as nighttime creatures, blending into the environment with dark fur bodies, ringed tails, and black fur surrounding their eyes to decrease glare at night. Raccoons possess a tapetum lucidum, a reflective layer in their eyes that enhances night vision. During the day these features can make them easy for predators to spot.",
+            "diet": "Raccoons are opportunistic feeders, consuming a wide range of foods including fruits, insects, small animals, and human-provided food sources.",
+            "role": "As omnivores and scavengers, raccoons play a crucial role in their ecosystem. They help keep populations of small pests in check and contribute to the dispersal of seeds from the fruits they consume. Raccoons are also prey for larger predators such as coyotes and bobcats.",
+            "fun-fact": "Raccoons dunk their food in water in order to enhance their sense of touch, not to wash it. Their paws hold up to five times more sensory receptors than their whiskers, and wetting their hands increases sensation by up to 50%.",
+            "range-map": "../../img/RaccoonRange.png",
+            "range-map-alt": "Range map for the raccoon.",
+            "range-map-caption": "Raccoon range map. <a href=\"https://commons.wikimedia.org/wiki/File:Raccoon-range.png\">Original: RokeDerivative work: Novil Ariandis</a>, <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a>, via Wikimedia Commons",
+            "effect-title": "Light Pollution's Effect on Raccoons",
+            "effect-description": "Light pollution can cause raccoons to diverge from their usual paths and hunt at irregular times. It has become increasingly common to see raccoons in broad daylight as their normal scavenging schedule has been disrupted, causing them distress and confusion. Daytime roaming can increase their chances of human interaction, which can lead to the spread of disease or create dangers on the road for drivers swerving out of the way to avoid the unsuspecting animals.",
+            "back": "Back to Urban Environment"
+          }
+        },
+        {
+          "id": "opossum",
+          "name": "Opossum",
+          "image": "img/Opossum.jpg",
+          "alt": "An opossum taking a stroll on someone's back porch.",
+          "endpoint": {
+            "title": "Lights Out - Opossum",
+            "caption": "Wandering Opossum - Source: <a href=\"https://www.pexels.com/\">Pexels.com</a>",
+            "quick-facts": {
+              "size": "14-18 inches",
+              "weight": "4-14 pounds",
+              "lifespan": "2-4 years",
+              "status": "Least Concern",
+              "Range": "North and South America"
+            },
+            "adaptations": "Opossums have naturally massive pupils, allowing them to see in great detail at night, while having poor vision during the day leading to damage from bright lights. They also possess impressive senses of hearing and smell, which can be overwhelmed in the daytime, but a powerful tool at night when noise is low, and smells have grown faint.",
+            "diet": "Opossums are omnivorous and scavengers, feeding on fruits, insects, small animals, and human food scraps.",
+            "role": "As opossums are one of the primary tick eaters in their ecosystem, they help control tick populations and reduce the spread of tick-borne diseases. Additionally, their scavenging habits contribute to the decomposition of organic matter, maintaining ecological balance.",
+            "fun-fact": "Opossums are the only marsupial (pouched mammal) native to North America.",
+            "range-map": "../../img/OpossumRange.png",
+            "range-map-alt": "A map highlighting the range of opossums",
+            "range-map-caption": "Opossum range map. <a href=\"https://commons.wikimedia.org/wiki/File:Didelphidae_distribution.png\">IUCN Red List of Threatened Species, species assessors and the authors of the spatial data.</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0\">CC BY-SA 3.0</a>, via Wikimedia Commons",
+            "effect-title": "Light Pollution's Effect on Opossums",
+            "effect-description": "Light pollution causes opossums' normal schedule to be disrupted, leading to increased daytime activity. This overwhelms their senses that are delicately tuned to the night. They can suffer eye damage from bright lights and daytime movement. Their daytime activity can cause the spread of disease and stress for humans as well as the animals.",
+            "back": "Back to Urban Environment"
+          }
+        },
+        {
+          "id": "common-nighthawk",
+          "name": "Common Nighthawk",
+          "image": "img/NightHawk.jpg",
+          "alt": "A nighthawk in light, on a branch.",
+          "endpoint": {
+            "title": "Lights Out - Common Nighthawk",
+            "caption": "Common nighthawk. Source: <a href=\"https://www.pexels.com/\">Pexels.com</a>",
+            "quick-facts": {
+              "size": "8-10 inches",
+              "weight": "2-4 ounces",
+              "lifespan": "4-5 years; Some reach 10 years",
+              "status": "Least Concern",
+              "Range": "Breeds across North America; winters in South America"
+            },
+            "adaptations": "These birds possess exceptionally large and sensitive eyes adapted for low-light vision. Their pupils can dilate significantly on demand to help them locate and track insects. They have a cavernous gaping mouth surrounded by bristle-like feathers, allowing to fly through clusters of insects that gather at night, collecting them all at once.",
+            "diet": "Common nighthawks are insectivores. Unfortunately ALAN is not the only thing these birds need to worry about. The introduction of insecticides across farmlands is causing a decline in their populations as their primary food sources become scarce.",
+            "role": "As aerial insectivores, nighthawks play a crucial role in controlling insect populations, thus maintaining the balance within their ecosystem. By consuming swarming pests such as mosquitoes, grasshoppers, beetles, and moths, they are an organic pest control service for crops and forests.",
+            "fun-fact": "When courting, the Common Nighthawk puts on an acrobatic display including a peent and a loud booming sound created by their dramatic dive through the air.",
+            "range-map": "../../img/NighthawkRange.jpg",
+            "range-map-alt": "Range map for the common nighthawk.",
+            "range-map-caption": "Common nighthawk range map. <a href=\"https://www.allaboutbirds.org/guide/Common_Nighthawk/maps-range\">Cornell Lab - All About Birds</a>",
+            "effect-title": "Light Pollution's Effect on Common Nighthawks",
+            "effect-description": "Artificial light at night can cause the common nighthawk to believe it is dawn sooner than it truly is. This can cause the bird to lose valuable hunting hours and disrupt its biological clock. The birds may wake earlier and begin hunting during daytime hours, putting them at risk of being seen and attacked by predators. Hunting grounds may become overcrowded as birds are drawn to artificially lit areas in search of bugs. This can lead to food scarcity and population decline.",
+            "back": "Back to Urban Environment"
+          }
+        }
+      ]
+    },
+    {
+      "id": "desert",
+      "title": "Lights Out - Desert",
+      "name": "Desert",
+      "image": "img/FennecFox.jpg",
+      "alt": "A fennec fox in the desert with city lights flooding the distant horizons.",
+      "heroImage": "img/DesertSkyline.jpg",
+      "heroAlt": "Desert skyline, fading into the stars at sunset.",
+      "animals": [
+        {
+          "id": "fennec-fox",
+          "name": "Fennec Fox",
+          "image": "img/FennecFox.jpg",
+          "alt": "A fennec fox curled up on a rock in a golden spotlight.",
+          "endpoint": {
+            "title": "Lights Out - Fennec Fox",
+            "caption": "Fennec fox. Source: <a href=\"https://www.pexels.com/\">Pexels.com</a>",
+            "quick-facts": {
+              "size": "9-16 inches",
+              "weight": "2-4 pounds",
+              "lifespan": "10-14 years",
+              "status": "Least Concern",
+              "Range": "Sahara and nearby arid regions of North Africa"
+            },
+            "adaptations": "Their massive ears are extremely sensitive to even the faintest sounds. This gives them the edge as a predator hunting in complete darkness. The bottom of their paws are well insulated with dense fur, allowing them to adjust quickly to the dramatic drops in desert temperatures at night and protect them from burns when the sand is still hot.",
+            "diet": "They are omnivores and may snack on the occasional insect or feast on rodents and reptile eggs. They also eat fruits and plants where they can find them.",
+            "role": "They serve as invaluable predators, keeping the rodent population under control. They also disperse fruit and plant seeds in their droppings, allowing the plants to take root despite the harsh desert climate.",
+            "fun-fact": "They do not need standing water and can survive on the moisture in the food they eat. Some can go their entire lives without drinking anything.",
+            "range-map": "../../img/FennecFoxRange.webp",
+            "range-map-alt": "Range map for the fennec fox.",
+            "range-map-caption": "Fennec fox range map. <a href=\"https://commons.wikimedia.org/wiki/File:Vulpes_zerda.svg\">M.Bitton</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0\">CC BY-SA 4.0</a>, via Wikimedia Commons",
+            "effect-title": "Light Pollution's Effect on Fennec Foxes",
+            "effect-description": "They rely on the darkness of night to hunt, forage, and mate. Artificial light can disrupt and confuse them, leading to an imbalance in their circadian rhythm. This could prevent them from both eating and mating.",
+            "back": "Back to Desert Environment"
+          }
+        },
+        {
+          "id": "kangaroo-rat",
+          "name": "Kangaroo Rat",
+          "image": "img/Kangaroo-rat.jpg",
+          "alt": "A kangaroo rat centered in the image blending in to the surroundings.",
+          "endpoint": {
+            "title": "Lights Out - Kangaroo Rat",
+            "caption": "Kangaroo rat. Source: <a href=\"https://commons.wikimedia.org/wiki/File:Kangaroo-rat.jpg\">Public Domain Wikimedia Commons</a>",
+            "quick-facts": {
+              "size": "3-6 inches, excluding tail",
+              "weight": "1-6 ounces",
+              "lifespan": "2-5 years",
+              "status": "Endangered",
+              "Range": "Arid regions of western North America"
+            },
+            "adaptations": "Kangaroo rats have extremely specialized ears that allow them to hear the low-frequency sounds of their predators searching for them or preparing to strike. Their large, powerful hind legs allow them to move quickly in the night, escaping predators with one jump and disappearing into the darkness.",
+            "diet": "They primarily survive on seeds and grains. They never have the need to drink water as they get enough moisture from the seeds and grains they consume.",
+            "role": "They are a valuable food source to larger predators and help distribute seeds during their travels across the vast desert.",
+            "fun-fact": "Kangaroo rats do not sweat at all and produce urine four times more concentrated than humans, thanks to their specialized kidneys. These functions help them conserve every drop of water in the brutal desert climate.",
+            "range-map": "../../img/KangarooRatRange.png",
+            "range-map-alt": "Range map for kangaroo rats.",
+            "range-map-caption": "Kangaroo rat range map; ranges vary by species. <a href=\"https://commons.wikimedia.org/wiki/File:Dipodomys_distribution.png\">IUCN Red List of Threatened Species, species assessors and the authors of the spatial data.</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0\">CC BY-SA 3.0</a>, via Wikimedia Commons",
+            "effect-title": "Light Pollution's Effect on Kangaroo Rats",
+            "effect-description": "Kangaroo rats thrive on complete and total darkness. They often obtain little to no food from foraging during full moons and instead conserve energy until a darker time. Artificial light can mimic the full moon and prevent them from foraging at all, causing them to starve to death.",
+            "back": "Back to Desert Environment"
+          }
+        },
+        {
+          "id": "sidewinder-rattlesnake",
+          "name": "Sidewinder Rattlesnake",
+          "image": "img/Rattlesnake.jpg",
+          "alt": "A Sidewinder Rattlesnake just below the surface of the sand ready to strike.",
+          "endpoint": {
+            "title": "Lights Out - Sidewinder Rattlesnake",
+            "caption": "Sidewinder rattlesnake. Source: <a href=\"https://www.pexels.com/\">Pexels.com</a>",
+            "quick-facts": {
+              "size": "1.5-2.5 feet",
+              "weight": "3-6 ounces",
+              "lifespan": "10-20 years",
+              "status": "Least Concern",
+              "Range": "Mojave and Sonoran deserts of the southwestern U.S. and Mexico"
+            },
+            "adaptations": "They have amazing infrared vision and are capable of detecting warm-blooded prey even in complete darkness. Their unique lateral winding motion allows them to maintain minimal contact with the scorching desert sand.",
+            "diet": "The sidewinder rattlesnake is a carnivore whose diet is primarily small rodents and lizards, dependent on the season.",
+            "role": "As predators, sidewinders control rodent populations, preserving the scarce desert vegetation. These snakes are a great food source for larger predators such as owls and road runners.",
+            "fun-fact": "Sidewinders use their own bodies as bowls to harvest rain and morning dew.",
+            "range-map": "../../img/SideWinderRattlesnakeRange.png",
+            "range-map-alt": "Range map for the sidewinder rattlesnake.",
+            "range-map-caption": "Sidewinder rattlesnake range map. <a href=\"https://commons.wikimedia.org/wiki/File:Crotalus_cerastes_distribution.png\">rbrausse</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0\">CC BY-SA 3.0</a>, via Wikimedia Commons",
+            "effect-title": "Light Pollution's Effect on Sidewinder Rattlesnakes",
+            "effect-description": "Excess light exposure can take away their element of surprise on unsuspecting prey. Being that they primarily hunt by ambushing their prey, without surprise on their side, their hunts are more likely to be unsuccessful. Light also makes them more visible to predators as well, causing their numbers in recent years to decrease.",
+            "back": "Back to Desert Environment"
+          }
+        },
+        {
+          "id": "elf-owl",
+          "name": "Elf Owl",
+          "image": "img/ElfOwl.jpg",
+          "alt": "An elf owl peeking out of its burrow in a cactus.",
+          "endpoint": {
+            "title": "Lights Out - Elf Owl",
+            "caption": "Elf owl. Source: <a href=\"https://www.pexels.com/\">Pexels.com</a>",
+            "quick-facts": {
+              "size": "5-6 inches",
+              "weight": "1-2 ounces",
+              "lifespan": "3-6 years; Up to 10 in captivity",
+              "status": "Least Concern",
+              "Range": "Southwestern U.S. and Mexico"
+            },
+            "adaptations": "Elf owls evolved to have specialized cylindrical eyes densly filled with light-sensitive cells. Having extra vertebrae in their neck for increased head rotation and their keen night vision, elf owls are exceptionally well adapted for pest control in the desert. Along with their night vision, elf owls are silent fliers and have assymetrically aligned ear openings for better audible perception.",
+            "diet": "Elf Owls are carnivores. Their primary diet consists of nocturnal bugs and insects such as moths, beetles, and crickets. However, they are well known for hunting scorpions, spiders and the occasional pocket mice.",
+            "role": "As many other predators, the elf owl plays a crucial role in keeping a major check on local insect and arachnid populations. Despite being predators, however, elf owls are prey to many other desert predators. Other owl species, snakes, and larger mammals all prey on elf owls. Elf owls also do not build their own nests. They seek out abandoned holes made by woodpeckers and other birds, in saguaro cacti.",
+            "fun-fact": "Elf Owls are known to drop a non venomous Texas blind snake into their nest to feed on parasitic mites, flies, and ants that would otherwise kill the vulnerable elf owl chicks.",
+            "range-map": "../../img/ElfOwlRange.webp",
+            "range-map-alt": "Range map for the elf owl.",
+            "range-map-caption": "Elf owl range map. <a href=\"https://commons.wikimedia.org/wiki/File:Micrathene_whitneyi_map.svg\">Cephas</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0\">CC BY-SA 4.0</a>, via Wikimedia Commons",
+            "effect-title": "Light Pollution's Effect on Elf Owls",
+            "effect-description": "Artifical night lighting disrupts insect activity and changes the dark conditions elf owls use to hunt. This leads to a reduction in hunting success as their stealthy hunting techniques are compromised. ALAN (Artificial Light at Night) can cause temporary blindness as an owl flies between dark and brightly lit areas, further reducing their hunting efficiency.",
+            "back": "Back to Desert Environment"
+          }
+        }
+      ]
+    },
+    {
+      "id": "forest",
+      "title": "Lights Out - Forest",
+      "name": "Forest",
+      "image": "img/GreatHornedOwl.jpg",
+      "alt": "An owl in the trees staring down at the viewer.",
+      "heroImage": "img/ForestSkyline.jpg",
+      "heroAlt": "Forest skyline, fading into the stars at sunset.",
+      "animals": [
+        {
+          "id": "great-horned-owl",
+          "name": "Great Horned Owl",
+          "image": "img/GreatHornedOwl.jpg",
+          "alt": "A Great Horned Owl looking down from a branch in the trees, staring tensely into the camera.",
+          "endpoint": {
+            "title": "Lights Out - Great Horned Owl",
+            "caption": "Great horned owl. Source: <a href=\"https://www.pexels.com/\">Pexels.com</a>",
+            "quick-facts": {
+              "size": "18-25 inches",
+              "weight": "2-5.5 pounds",
+              "lifespan": "13-15 years; Up to 30 in captivity",
+              "status": "Least Concern",
+              "Range": "Much of North and South America"
+            },
+            "adaptations": "Great horned owls possess exceptional night vision due to their cylindrically-shaped eyes letting in massive amounts of light. Through the use of extra vertebrae, the great horned owl has adapted its neck to rotate up to 270 degrees to account for their fixed eye position.",
+            "diet": "Great horned owl are carnivorous through and through. They primarily hunt rodents and rabbits, but are powerful enough to take down larger prey, including raccoons, skunks, porcupines, falcons, and even other owls.",
+            "role": "Great horned owls are apex predators. As they are the top predators in their ecosystem, they act as a regulator for prey populations, helping maintain ecological balance. Interestingly great horned owls do not build their own nests. Instead, they rely on other species for infrastructure, taking over old nests built by hawks, crows, or even squirrels.",
+            "fun-fact": "Some Native American tribes view the Great Horned Owl as guardians and protectors.",
+            "range-map": "../../img/GreatHornedOwlRange.png",
+            "range-map-alt": "Range map for the great horned owl.",
+            "range-map-caption": "Great horned owl range map. <a href=\"https://commons.wikimedia.org/wiki/File:Bubo_virginianus_dis.png\">See page for author</a>, <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a>, via Wikimedia Commons",
+            "effect-title": "Light Pollution's Effect on Great Horned Owls",
+            "effect-description": "Over the last century ALAN (Artificial Light at Night) has been proven to act as an evolutionary selection driver on great horned owl's eyes. Alongside this effect, ALAN can also disrupt how great horned owls nest. Nest sites in brightly lit areas have a significant reduction in occupancy rates. This disrupts their reproductive success and can have long-term impacts on population dynamics.",
+            "back": "Back to Forest Environment"
+          }
+        },
+        {
+          "id": "flying-squirrel",
+          "name": "Flying Squirrel",
+          "image": "img/FlyingSquirrel.jpg",
+          "alt": "A flying squirrel climbing a horizontal branch.",
+          "endpoint": {
+            "title": "Lights Out - Flying Squirrel",
+            "caption": "Flying squirrel. Source: <a href=\"https://www.pexels.com/\">Pexels.com</a>",
+            "quick-facts": {
+              "size": "8-13 inches",
+              "weight": "2-5 ounces",
+              "lifespan": "2-5 years; Up to 15 in captivity",
+              "status": "Least Concern",
+              "Range": "Forests in parts of North America, Europe, and Asia"
+            },
+            "adaptations": "Flying squirrels have large black eyes, which allow them to see more clearly at night. They have specialized long whiskers which can feel the environment around them so that even during moonless nights, they can navigate in complete darkness.",
+            "diet": "They are omnivores primarily feasting on mushrooms and spores. They also eat a variety of nuts, seeds, and even truffles. On a very rare occasion, they may also consume small insects or bird eggs.",
+            "role": "Flying squirrels play a special role in the spore distribution of mushrooms and other fungi, which are spread to new locations in their droppings. Because of their diet, they also plant seeds, helping the plant life spread.",
+            "fun-fact": "Flying squirrels glow pink under UV fluorescent lights! Scientists are still unsure about the purpose of their pink glow, as it can sometimes make it easier for predators to find them.",
+            "range-map": "../../img/FlyingSquirrelRange.webp",
+            "range-map-alt": "Range map for flying squirrels.",
+            "range-map-caption": "Flying squirrel range map; ranges vary by species. <a href=\"https://commons.wikimedia.org/wiki/File:Glaucomys_volans_map.svg\">Cephas</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0\">CC BY-SA 4.0</a>, via Wikimedia Commons",
+            "effect-title": "Light Pollution's Effect on Flying Squirrels",
+            "effect-description": "Flying squirrels can be easily blinded by bright artificial lights. Bright lights can leave them disoriented and vulnerable to predators. They primarily forage at night in the safety of the darkness. Bright lights can disrupt their natural foraging times, causing them to be exposed to predators in the daylight. Light pollution can also wash out disrupt the squirrels' subtle visual signals given off by their biofluorescent fur.",
+            "back": "Back to Forest Environment"
+          }
+        },
+        {
+          "id": "firefly",
+          "name": "Firefly",
+          "image": "img/FireFly.jpg",
+          "alt": "A firefly in the daytime on a blade of grass.",
+          "endpoint": {
+            "title": "Lights Out - Firefly",
+            "caption": "Firefly. Source: <a href=\"https://www.pexels.com/\">Pexels.com</a>",
+            "quick-facts": {
+              "size": "0.2-1 inch",
+              "weight": "20-200 milligrams",
+              "lifespan": "1-2 years as larva; 2-4 weeks as adult",
+              "status": "Status varies: Least Concern - Threatened",
+              "Range": "Temperate and tropical regions worldwide, except Antarctica"
+            },
+            "adaptations": "Fireflies are able to produce a flashing light thanks to a chemical reaction in their abdominal organs. This light is only visible in the darkness of night and allows them to find a mate, communicate, and warn predators of their horrible taste.",
+            "diet": "As larvae, fireflies live in the soil and eat worms, slugs, snails, and other woodland pests. Adult fireflies eat little to nothing.",
+            "role": "Despite what their name insists, fireflies are actually considered beetles, not flies. As larvae, they help control the population of small invertebrates in their habitat. As adults, fireflies biggest role in the ecosystem is actually helping in pollination as they snack on nectar. As adults they are not prey to many as they taste so bad.",
+            "fun-fact": "Adult males can release their foul-tasting, toxic blood to deter bold predators from trying to eat them, although most birds and typical insect predators know better than to try to eat a firefly.",
+            "range-map": "../../img/FireflyRange.jpeg",
+            "range-map-alt": "Range map for fireflies.",
+            "range-map-caption": "Firefly range map; distributions vary by species. <a href=\"https://news.mongabay.com/2021/03/new-assessment-shines-a-light-on-the-state-of-north-americas-fireflies/\">Mongabay News</a>",
+            "effect-title": "Light Pollution's Effect on Fireflies",
+            "effect-description": "Artificial light at night has been detrimental to fireflies. Due to the interfering artificial light, they are unable to communicate, find mates, or reproduce. In recent years, firefly populations have decreased drastically.",
+            "back": "Back to Forest Environment"
+          }
+        },
+        {
+          "id": "luna-moth",
+          "name": "Luna Moth",
+          "image": "img/LunaMoth.jpg",
+          "alt": "A luna moth perfectly centered in the image on a tree.",
+          "endpoint": {
+            "title": "Lights Out - Luna Moth",
+            "caption": "Luna moth. Source: <a href=\"https://www.pexels.com/\">Pexels.com</a>",
+            "quick-facts": {
+              "size": "3-4.5 inches",
+              "weight": "300-500 milligrams",
+              "lifespan": "About 1 week",
+              "status": "Threatened - Endangered",
+              "Range": "Eastern North America and parts of Canada"
+            },
+            "adaptations": "Luna moth's long tails attach to their hindwings and are capable of disrupting bats' echolocation, making the moths difficult for bats to catch. Every now and then, a bat might be able to bite the tail, but the moth itself will still be able to escape it.",
+            "diet": "Luna moths actually do not eat at all. They do not possess mouths or digestive organs. They live for a short time and are fueled entirely by the stored energy from their time as caterpillars.",
+            "role": "As caterpillars, they eat all kinds of leaves from maple, sweet gum, and hickory trees, just to name a few, absorbing nutrients that will eventually make its way back into the environment. They do act as a food source for some nighttime predators.",
+            "fun-fact": "Males and females can be distinguished based on the antenna. Males have large bushy antennae, while the females have long, slender antennae.",
+            "range-map": "../../img/LunaMothRange.jpg",
+            "range-map-alt": "Range map for the luna moth.",
+            "range-map-caption": "Luna moth range map. <a href=\"https://doi.org/10.15468/dl.mphuwq\">GBIF.org</a>",
+            "effect-title": "Light Pollution's Effect on Luna Moths",
+            "effect-description": "Light pollution has greatly disrupted Luna moths' mating and reproductive abilities. The moths only live a short time as adults capable of reproduction. If that time is spent chasing artificial lights rather than mating, they miss their chance to reproduce at all. This issue has led to a major decline in the species numbers in recent years.",
+            "back": "Back to Forest Environment"
+          }
+        }
+      ]
+    },
+    {
+      "id": "coastal",
+      "title": "Lights Out - Coastal",
+      "name": "Coastal",
+      "image": "img/SeaTurtle.jpg",
+      "alt": "A loggerhead sea turtle traveling from the right side of the screen to the left in golden sand.",
+      "heroImage": "img/CoastalSkyline.jpg",
+      "heroAlt": "Coastal skyline, fading into the stars at sunset.",
+      "animals": [
+        {
+          "id": "sea-turtle",
+          "name": "Loggerhead Sea Turtle",
+          "image": "img/SeaTurtle.jpg",
+          "alt": "A baby loggerhead sea turtle traveling from the right side of the screen to the left in golden sand.",
+          "endpoint": {
+            "title": "Lights Out - Loggerhead Sea Turtle",
+            "caption": "Loggerhead sea turtle. Source: <a href=\"https://www.pexels.com/\">Pexels.com</a>",
+            "quick-facts": {
+              "size": "2.5-3.5 feet",
+              "weight": "155-375 pounds",
+              "lifespan": "70-80+ years",
+              "status": "Vulnerable",
+              "Range": "Temperate and tropical oceans worldwide"
+            },
+            "adaptations": "Loggerhead sea turtle hatchlings emerge from nests, instictively traveling towards the brightest horizon, usually the moonlight or sunlight reflecting from the ocean. These sea turtles then rely on Earth's geomagnetic field for long distance migrations.",
+            "diet": "Loggerheads are carnivores, feeding on marine animals near the ocean floor such as crabs, mollusks, and jellyfish. Their strong jaws help them crush hard-shelled prey. Their throat has spines helping to prevent prey like jellyfish from escaping.",
+            "role": "These marine predators help control the population of other hard shelled marine animals, maintaining a balanced ecosystem. As they forage along the ocean floor they release trapped nutrients back into the water column. A loggerheads shell is known as a living reef, enabling many different species to attach and grow. This inadvertantly transports these organisms to new environments in which it promotes marine biodiversity.",
+            "fun-fact": "A loggerhead's nest can produce all-male or all-female hatchlings depending entirely on the temperature of the sand.",
+            "range-map": "../../img/SeaTurtleRange.webp",
+            "range-map-alt": "Range map for loggerhead sea turtles.",
+            "range-map-caption": "Loggerhead sea turtle range map. <a href=\"https://commons.wikimedia.org/wiki/File:Cypron-Range_Caretta_caretta.svg\">www.fao.org</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0\">CC BY-SA 3.0</a>, via Wikimedia Commons",
+            "effect-title": "Light Pollution's Effect on Loggerhead Sea Turtles",
+            "effect-description": "Artifical lights are the most severe threats to the surival and successful repopulation of loggerhead sea turtles. When hatchling emerge from their nests, they instictively move towards the brightest horizon. Artifical lights disrupt this sense of direction as they are often much brighter than the natural light of the moon and stars reflecting off of the ocean. This leads hatchlings away from the ocean, increasing their risk of predation and reducing their chances of survival.",
+            "back": "Back to Coastal Environment"
+          }
+        },
+        {
+          "id": "ghost-crab",
+          "name": "Ghost Crab",
+          "image": "img/GhostCrab.jpg",
+          "alt": "A ghost crab on sand staring into the camera.",
+          "endpoint": {
+            "title": "Lights Out - Ghost Crab",
+            "caption": "Ghost crab. Source: <a href=\"https://www.pexels.com/\">Pexels.com</a>",
+            "quick-facts": {
+              "size": "2-3 inches",
+              "weight": "90 grams",
+              "lifespan": "1-3 years; Up to 5 in captivity",
+              "status": "Least Concern",
+              "Range": "Tropical and subtropical sandy coasts worldwide"
+            },
+            "adaptations": "Ghost crabs have a specialized set of compound highly maneuverable eyestalks, given them 360-degree vision. Ghost crabs blend in incredibly well at night with their translucent, yellow coloring. They are capable of reaching speeds up to 10 feet per second allowing them to escape many predators. Much like the beach mouse, these crabs spend most of their day in cool moist burrows.",
+            "diet": "Ghost crabs are omnivorous scavengers, feeding on small animals, dead organisms, and plant material. They will eat just about anything they can find.",
+            "role": "Ghost crabs act as the clean up crew for the coastal ecosystem. By quickly devouring any organic matter, they prevent build up of toxic bacteria, maintaining a healthy environment for other coastal organisms. As these guys are relentless diggers, they successfully aerate the sand, cycle moisture and nutrients throughout.",
+            "fun-fact": "Ghost crabs can \"growl\" at predators using a hidden teeth like structure in their stomach",
+            "range-map": "../../img/GhostCrabRange.png",
+            "range-map-alt": "Range map for ghost crabs.",
+            "range-map-caption": "Ghost crab range map; ranges vary by species. <a href=\"https://www.inaturalist.org/taxa/53875-Ocypode-quadrata#map-tab\">iNaturalist</a>",
+            "effect-title": "Light Pollution's Effect on Ghost Crabs",
+            "effect-description": "Beach lighting can alter crab activity, disrupting their natural foraging and burrowing behaviors. These crabs are attracted to lit areas because the light attracts swarms of insects, which they feed on. This increases their vulnerability to predators and reduces their overall survivability.",
+            "back": "Back to Coastal Environment"
+          }
+        },
+        {
+          "id": "beach-mouse",
+          "name": "Beach Mouse",
+          "image": "img/BeachMouse.jpg",
+          "alt": "A beach mouse hiding under a rock, nestled behind a few dried blades of grass.",
+          "endpoint": {
+            "title": "Lights Out - Beach Mouse",
+            "caption": "Beach mouse. Source: <a href=\"https://commons.wikimedia.org/wiki/File:Peromyscus_polionotus_ammobates.jpg\">Jackie Isaacs/USFWS</a>, Public domain, via Wikimedia Commons",
+            "quick-facts": {
+              "size": "5-5.5 inches",
+              "weight": "10-17 grams",
+              "lifespan": "4-9 months",
+              "status": "Endangered",
+              "Range": "Coastal dunes in the southeastern United States"
+            },
+            "adaptations": "Beach mice have adapted to night time activity with enlarged eyes and ears. They also have a strict nocturnality to avoid predators and extreme daytime heat. They seal themselves deep inside burrows of coastal dunes during the day for protection.",
+            "diet": "Beach mice are herbivores, eating seeds and other plant matter. Their primary food source is a deeply rooted grass, sea oats, native to southeastern United States and Mexico.",
+            "role": "This endangered species provides a crucial role in coastal dune ecosystems. By foraging more seeds than they can eat, they disperse the vegetation that shape coastal dunes. Beach mice are constantly digging. They burrow extensive tunnel systems in the dunes ultimately creating habitats and a cool shelter for other dune-dwelling organisms. Beach mouse populations are monitored closely as they are an environmental indicator species, relying on a perfectly healthy and intact coastal dune ecosystem for their survival.",
+            "fun-fact": "Beach mice build secret escape hatchees into their burrows to evade predators.",
+            "range-map": "../../img/BeachMouseRange.jpg",
+            "range-map-alt": "Range map for beach mice.",
+            "range-map-caption": "Beach mouse range map; ranges vary among subspecies. <a href=\"https://commons.wikimedia.org/wiki/File:Elife06813f002.jpg\">Nicole Bedford and Hopi Hoekstra</a>, CC0, via Wikimedia Commons",
+            "effect-title": "Light Pollution's Effect on Beach Mice",
+            "effect-description": "Since these mice rely on pitch black darkness to hide from their predators, ALAN completely disrupts their ability to remain concealed, making them more vulnerable to predation. There have been studies showing beach mice foraging up to one-third less food patches of artifical light. This all ultimately leads to their decreased survival and overall population decline.",
+            "back": "Back to Coastal Environment"
+          }
+        },
+        {
+          "id": "shearwater",
+          "name": "Shearwater",
+          "image": "img/Shearwater.jpg",
+          "alt": "Two shearwaters soaring through the sky in different directions over the open ocean.",
+          "endpoint": {
+            "title": "Lights Out - Shearwater",
+            "caption": "Shearwater. Source: <a href=\"https://www.pexels.com/\">Pexels.com</a>",
+            "quick-facts": {
+              "size": "40-56 centimeters",
+              "weight": "650-950 grams",
+              "lifespan": "15-20 years",
+              "status": "Near Threatened - Critically Endangered",
+              "Range": "Oceans worldwide, depending on species"
+            },
+            "adaptations": "Shearwaters have adapted to have an incredible sense of smell, unlike most birds. This adaptation helps them locate a chemical gas released by the feasting of marine phytoplankton, indicating the presence of krill or fish. Their eyes feature a specialized reflective layer to help them see clearly while diving deep into the dark ocean waters.",
+            "diet": "These birds are marine carnivores, feeding entirely on fish, squid, and other marine prey. Their diet is rich in high-energy organisms that sustain their massive transoceanic adventures.",
+            "role": "Shearwaters are the coastal ecosystem's farmers. By feeding on rich marine prey and returning to their nesting islands, they leave nutrient rich guano behind, fertilizing the soil and promoting plant growth. As shearwaters consume millions of tons of schooling marine life annually, they play a significant role in the regulation of marine populations.",
+            "fun-fact": "Shearwaters sleep while flying by turning off one half of their brain, allowing them to fly for long distances without needing to land.",
+            "range-map": "../../img/ShearwaterRange.jpg",
+            "range-map-alt": "Range map for shearwaters.",
+            "range-map-caption": "Shearwater range map; ranges vary by species. <a href=\"https://www.allaboutbirds.org/guide/Great_Shearwater/maps-range\">Cornell Lab All About Birds</a>",
+            "effect-title": "Light Pollution's Effect on Shearwaters",
+            "effect-description": "Artificial lights cause fledglings to mistake coastal city lights for bioluminescent prey or horizons. This disorientation can lead to collisions with buildings and other hazards leaving them trapped and vulnerable to predators.",
+            "back": "Back to Coastal Environment"
+          }
+        }
+      ]
+    }
+  ]
+}

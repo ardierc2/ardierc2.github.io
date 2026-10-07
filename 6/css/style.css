@@ -1,0 +1,1015 @@
+* {
+    box-sizing: border-box;
+}
+
+/* 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>
+            Page 
+<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+*/
+
+body {
+    margin: 0;
+    background-color: #000310;
+    color: white;
+    font-size: 1.33rem;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+      Links and Other
+<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+*/
+
+.silent-link:link, .silent-link:visited{
+    color: white;
+    text-decoration: none;
+}
+
+.silent-link:hover, .silent-link:active, .silent-link:focus-visible {
+    text-decoration: underline solid orange;
+}
+
+.silent-link-no-underline:link, .silent-link-no-underline:visited {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+footer a:link, footer a:visited {
+    color: hsl(218, 100%, 80%);
+}
+
+figcaption a:link {
+    color: hsl(218, 100%, 80%);
+}
+figcaption a:visited {
+    color: rgb(231, 179, 255);
+}
+
+.glow {
+    text-shadow: 0 2px 75px white;
+}
+
+.silent-href:hover {
+    text-decoration: none;
+}
+
+.text-outline {
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/-webkit-text-stroke */
+    -webkit-text-stroke: px rgb(63, 64, 85);
+}
+
+.double-underline-orange {
+    text-decoration: underline double orange;
+}
+.underline-orange {
+    text-decoration: underline solid orange;
+}
+
+/* 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+            Layout 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+*/
+
+.content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1em;
+    max-width: 1500px;
+}
+
+.section-bar {
+    width: 80%;
+    height: 3px;
+    border: 0;
+    border-radius: 1em;
+    background-color: #3f4055;
+
+    margin: 1em auto;
+}
+
+.sub-section-bar {
+        width: 25%;
+        height: 3px;
+        margin: 0.5em auto;
+        padding: 0;
+        border: 0;
+        border-radius: 1em;
+        background-color: orange;
+}
+
+.explore-bar {
+    width: 80%;
+    height: 3px;
+    margin: 0.5em auto;
+    padding: 0;
+    border: 0;
+    border-radius: 1em;
+    background-color: orange;
+}
+
+.button {
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 1em;
+    background-color: rgba(255, 165, 0, 0.75);
+    color: white;
+    text-decoration: none;
+}
+
+.button:hover,.button:active {
+    background-color: rgba(63, 64, 85, 0.9);
+    text-decoration: underline solid orange;
+}
+
+.small-font {
+    font-size:medium;
+}
+
+.small-margin {
+    margin: 5px;
+}
+
+.wide-img-window {
+    width: 100%;
+    max-width: 100%;
+    height:auto;
+
+    border-radius: 1em;
+    border: 2px solid #3f4055;
+}
+
+figure {
+    margin:0;
+    padding: 0;
+}
+
+figcaption {
+    font-size:1rem;
+}
+
+.section-figure {
+    margin-top: 2em;
+}
+
+.figure-image-source {
+    text-align: center;
+    color:#dddeec
+}
+
+/* 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+          Key Stats 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+*/
+
+.stat-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 1em;
+    padding: 0;
+    list-style: none;
+}
+
+.stat-card {
+    margin: 10px 20px;
+    padding: 20px;
+    width: 300px;
+    border-radius: 1em;
+    background-color: #1f262b;
+}
+
+.stat-value-emphasis {
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+
+    color: orange;
+}
+
+.change {
+    color: orange;
+
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.change-small {
+    color: orange;
+    padding: 5px;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.give-me-room {
+    padding: 50px 5px 25px 5px;
+}
+
+/* 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        Light Principle 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+*/
+
+.five-principles {
+    width:100%;
+    margin-top:1em;
+}
+
+.light-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 1em;
+    padding: 0;
+    list-style: none;
+}
+
+.light-card {
+    margin:1em 0;
+    width: 100%;
+}
+
+.light-card div {
+    padding: 20px;
+    width: 100%;
+    
+    border-radius: 1em;
+    background-color: #1f262b;
+} 
+
+/* 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    Dark Sky Movement
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+*/
+.dsm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width:100%;
+
+    margin: 1em 0;
+}
+
+.dsm-card {
+    display: flex;
+    width: 100%;
+
+    margin: 10px 0;
+    padding: 16px;
+
+    align-items:center;
+
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    flex-direction: column;
+}
+
+/* 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        Two-Step
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+*/
+
+.two-step {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.two-step-card {
+    width:auto;
+
+    align-content: flex-end;
+
+    padding: 10px 20px;
+    margin:1em;
+
+    font-size: 1.25em;
+
+    border-radius: 1em;
+    background-color: #1f262b;
+
+    border: 2px solid transparent;
+
+}
+
+.two-step-card:hover, .two-step-card:active {
+    border-color: orange;
+}
+
+.two-step-card img {
+    border: none; /* I couldn't figure out why some of my card image borders were white and some werent, it was frustrating so I am just removing the border here */
+    
+}
+
+.two-step-card:hover, .two-step-card:active{
+    transform:scale(1.05);
+}
+
+/* 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    Problem Information 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+*/
+
+.problem-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    text-align: center;
+    margin: 2em 1em;
+    padding: 0;
+    list-style: none;
+}
+
+.problem-card {
+    margin: 10px 20px;
+    padding: 20px;
+    font-size: 1.25rem;
+    border-radius: 1em;
+    background-color: #1f262b;
+}
+
+.problem-statement {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.problem-details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.img-window {
+    width: 300px;
+    height: 300px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 1em;
+    border: 2px solid #3f4055;
+}
+
+
+/* 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+           Explore  
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+*/
+
+.explore {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    margin: 2em 1em;
+}
+
+.explore-card {
+    display: flex;
+    width: 100%;
+
+    background-color: #1f262b;
+    border-radius: 1em;
+    margin: 10px 0;
+    padding: 24px;
+
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    flex-direction: column;
+}
+
+.explore-card-img {
+    grid-row: span 2;
+}
+
+.explore-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+    padding: 10px;
+}
+
+.explore-card-button {
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 1em;
+
+    min-width:20%;
+
+    font-size: 1.2rem;
+
+    align-content: center;
+    
+    color: white;
+    text-decoration: none;
+}
+
+.explore-img-window {
+    width: 300px;
+    height: 300px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 1em;
+    border: 2px solid #3f4055;
+}
+/* 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+         Navigation 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+*/
+
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;    /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/z-index */
+    display: flex;
+    width: 100%;
+    background-color: rgba(63, 64, 85, 0.9);
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    flex: 1;
+}
+
+.nav-right {
+    justify-content: flex-end;
+}
+
+.nav-home, .nav-login {
+    margin: 6px;
+    padding: 6px 12px;
+    border-radius: 1em;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+
+    border: 2px solid transparent;
+}
+
+.nav-home {
+    background-color: rgba(255, 165, 0, 0.75);
+    min-width: 0;
+}
+
+.nav-home:hover, .nav-home:active {
+    background-color: transparent;
+    border: 2px solid orange;
+}
+
+.nav-login {
+    font-weight: 600;
+}
+
+.nav-login:hover,.nav-login:active {
+    color: orange;
+}
+
+.nav-center {
+    display: none; /* not shown on small screens. I will incorporate a hamburger menu for small screens */
+    margin: 10px 0;
+    border-radius: 1em;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.nav-link {
+    flex: 1;
+    min-width: 150px;
+    margin: 0 12px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav-link:hover,.nav-link:active {
+    color: orange;
+}
+
+/* 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+      Contact Us Form     
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+*/
+
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    text-align:left;
+
+    margin: 1rem;
+}
+
+.contact-form div label {
+    font-size: 1.5rem;
+}
+
+.form-input {
+    width: 100%;
+
+    max-width: 906px;
+    max-height:906px;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 1em;
+    border: 2px solid #3f4055;
+    background-color: #1f262b;
+
+    color: white;
+
+    font-size: 1.2rem;
+}
+
+.submit-button{
+    border-style: none;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.contact-form-submit {
+    text-align:center;
+}
+
+.form-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-height: 300px;
+
+        object-fit: cover;
+        object-position: center;
+
+        border-radius: 1em;
+        border: 2px solid #3f4055;
+    }
+
+
+/* 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+           Animals     
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+*/
+
+.animal-profile-pic figcaption{
+    font-size: .95rem;
+    color: #dddeec
+}
+
+.animal-profile-pic {
+    height: 100%;
+}
+
+.animal-profile-pic img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.animal-quick-facts {
+    display: flex;
+    width: 100%;
+
+    background-color: #1f262b;
+    border-radius: 1em;
+    margin: 10px 0;
+    padding: 24px;
+    text-align:left;
+
+    flex-direction: column;
+}
+
+.animal-quick-facts h3 {
+    text-align: center;
+    font-size:1.5rem;
+}
+
+.animal-quick-facts ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.animal-quick-facts li {
+    font-size:1rem;
+}
+
+.animal-quick-facts li strong {
+    color: orange;
+    font-size: 1.1rem;
+}
+
+.range-img-window {
+    object-fit: cover;
+    object-position: center;
+
+    width:100%;
+    height: auto;
+}
+
+.animal-description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    /* background-color: #1f262b;
+    border-radius: 1em; */
+    margin: 10px 0;
+    padding: 24px;
+    text-align:left;
+}
+
+.animal-description h3 {
+    text-align: center;
+    font-size: 2rem;
+
+    margin-top: 2rem;
+}
+
+.animal-light-effect {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    background-color: #1f262b;
+    border-radius: 1em;
+    margin: 2em 10px;
+    padding: 24px;
+    text-align:left;
+}
+
+.animal-fun-fact {
+    background-color: #1f262b;
+    border-radius: 1em;
+    margin: 2em 0;
+    padding: 24px;
+    text-align:left;
+}
+
+.animal-fun-fact strong {
+    color: orange;
+}
+
+.animal-quick-facts ul {
+    list-style-position: inside; /* https://teamtreehouse.com/community/how-to-make-the-space-on-left-hand-side-go-away-along-with-the-bullet-points-for-li-elements-in-a-ul */
+}
+
+.animal-quick-facts ul li {
+    margin: 5px 0;
+}
+
+.animal-description h3 {
+    font-size: 2rem;
+    text-align: left;
+}
+
+.animal-description .sub-section-bar {
+    margin: 10px 0;
+}
+
+
+/* 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+            Hero     
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+*/
+
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    max-height: 800px;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: bottom;
+    /* Fixes the squishing of the image at odd aspect ratios */
+    /* https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit */
+    /* I have further used this trick throughout the stylesheet */
+}
+
+.hero-title {
+    position: relative;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.75rem;
+    text-shadow: 0 2px 75px rgba(59, 155, 207, 1);
+
+    text-decoration: underline solid orange;
+
+    -webkit-text-stroke: px rgb(63, 64, 85); /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/-webkit-text-stroke */
+}
+
+/* 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+            Footer 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+*/
+
+footer {
+    padding: 1em;
+    text-align: center;
+}
+
+/* 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+      Medium Screens and Up 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+*/
+
+@media (min-width: 875px) {
+    .nav-home, .nav-login {
+        margin: 10px;
+        padding: 10px 20px;
+        font-size: 1.25em;
+    }
+
+    .nav-home {
+        min-width: 168px;
+    }
+
+    .top-nav {
+        background-color: transparent;
+    }
+
+    .nav-center {
+        display: flex;
+        background-color: rgba(63, 64, 85, 0.9);
+        margin:auto;
+    }
+
+    .nav-login {
+        background-color: rgba(63, 64, 85, 0.9);
+    }
+
+    .stat-card {
+        max-width: 45%;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .explore-card {
+        display: grid;
+        
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        
+        gap: 20px;
+    }
+
+    .explore-card-button {
+        min-width:20%;
+
+        font-size: 1.5rem;
+    }
+
+    .explore-card-img {
+        grid-row: span 2;
+    }
+
+    .explore-card:nth-child(even) .explore-card-img{
+        grid-column: 2;
+        grid-row: span 2;
+    }
+
+    .explore-card:nth-child(even) .explore-card-info{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .explore-card:nth-child(even) .explore-card-button{
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .img-window {
+        width: auto;
+        min-width: 300px;
+    }
+
+    .form-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+
+        margin: 2em 1em;
+        gap: 50px;
+    }
+
+    .wide-img-window {
+        object-fit: cover;
+        object-position:center; 
+
+        width: 100%;
+        height: 500px;
+    }
+
+    .dsm {
+        margin: 2em 1em;
+    }
+
+    .dsm-card {
+        padding: 24px;
+    }
+
+    .small-font {
+        font-size:large;
+    }
+
+    .two-step-card {
+        font-size: 1.5rem;
+    }
+
+    .two-step-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .two-step-card {
+        font-size: 1.75em;
+    }
+
+    .animal-info {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 2fr;
+        gap: 20px;
+    }
+
+    .animal-description {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+
+
+    .animal-pic-info {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .animal-range-map img{
+        width: 100%;
+        height: auto;
+    }
+
+    .explore-card-info {
+        font-size: 1.6rem;
+        font-weight:500
+    }
+
+    .explore-card-button {
+        font-size: 1.75rem;
+    }
+}
+
+/*
+>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    Large Screens and Up     
+<<<<<<<<<<<<<<<<<<<<<<<<<<<
+*/
+
+@media (min-width: 1000px) {
+    .section-bar {
+        width: 95%;
+    }
+
+    .stat-card {
+        max-width: 30%;
+    }
+
+    .hero-title {
+        font-size: 5rem;
+    }
+
+    .light-card {
+        margin: 10px 20px;
+        width: 30%;
+        border-radius: 1em;
+    }
+
+    .dsm-card {
+        display: grid;
+        
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+
+        gap: 20px;
+    }
+
+    .dsm-card:nth-child(even) .dsm-card-img{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .dsm-card:nth-child(even) .dsm-card-info{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .animal-quick-facts h3 {
+        font-size: 2rem;;
+    }
+
+    .animal-quick-facts ul li {
+        font-size: 1.25rem;
+    }
+
+    .animal-quick-facts ul strong {
+        font-size: 1.25rem;
+    }
+    
+}
+
+/* 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    Extra Large Screens 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+*/
+
+@media (min-width: 1500px) {
+    .section-bar {
+        width: 1500px;
+    }
+
+    .two-step-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .two-step-card:hover, .two-step-card:active{
+        transform:scale(1.075);
+    }
+}
