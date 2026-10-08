@@ -79,6 +79,19 @@ figcaption a:visited {
     text-decoration: underline solid orange;
 }
 
+button {
+    border: none;
+    background: inherit;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+.back-button {
+    position:relative;
+    bottom: -16px;
+}
+
 /* 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
             Layout 
@@ -325,13 +338,25 @@ figcaption {
     border-color: orange;
 }
 
+/* I couldn't figure out why some of my card image borders were white and some werent, it was frustrating so I am just removing the border here */
 .two-step-card img {
-    border: none; /* I couldn't figure out why some of my card image borders were white and some werent, it was frustrating so I am just removing the border here */
-    
+    border: none; 
 }
 
-.two-step-card:hover, .two-step-card:active{
+.two-step-card:hover{
     transform:scale(1.05);
+    box-shadow: 0 4px 8px rgba(255, 165, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.two-step-card {
+    transition: transform 0.2s ease;
+}
+
+.two-step-card:active {
+    transform: scale(1);
+    box-shadow: 0 2px 4px rgba(255, 165, 0, 0.5);
+    transition: transform 0.1s ease;
 }
 
 /* 
@@ -1009,7 +1034,11 @@ footer {
         grid-template-rows: 1fr;
     }
 
-    .two-step-card:hover, .two-step-card:active{
+    .two-step-card:hover{
         transform:scale(1.075);
+    }
+
+    .two-step-card:active{
+        transform:scale(1);
     }
 }

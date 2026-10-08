@@ -1,7 +1,6 @@
 {
   "environments": [
     {
-      "id": "urban",
       "title": "Lights Out - Urban",
       "name": "Urban",
       "image": "img/Raccoon.jpg",
@@ -10,7 +9,6 @@
       "heroAlt": "Urban skyline, fading into the stars at sunset.",
       "animals": [
         {
-          "id": "little-brown-bat",
           "name": "Little Brown Bat",
           "image": "img/LittleBrownBat.jpg",
           "alt": "A little brown bat clenching a fence in broad daylight.",
@@ -37,7 +35,6 @@
           }
         },
         {
-          "id": "raccoon",
           "name": "Raccoon",
           "image": "img/Raccoon.jpg",
           "alt": "A raccoon observing something in the distance off camera.",
@@ -64,7 +61,6 @@
           }
         },
         {
-          "id": "opossum",
           "name": "Opossum",
           "image": "img/Opossum.jpg",
           "alt": "An opossum taking a stroll on someone's back porch.",
@@ -91,7 +87,6 @@
           }
         },
         {
-          "id": "common-nighthawk",
           "name": "Common Nighthawk",
           "image": "img/NightHawk.jpg",
           "alt": "A nighthawk in light, on a branch.",
@@ -120,7 +115,6 @@
       ]
     },
     {
-      "id": "desert",
       "title": "Lights Out - Desert",
       "name": "Desert",
       "image": "img/FennecFox.jpg",
@@ -129,7 +123,6 @@
       "heroAlt": "Desert skyline, fading into the stars at sunset.",
       "animals": [
         {
-          "id": "fennec-fox",
           "name": "Fennec Fox",
           "image": "img/FennecFox.jpg",
           "alt": "A fennec fox curled up on a rock in a golden spotlight.",
@@ -156,7 +149,6 @@
           }
         },
         {
-          "id": "kangaroo-rat",
           "name": "Kangaroo Rat",
           "image": "img/Kangaroo-rat.jpg",
           "alt": "A kangaroo rat centered in the image blending in to the surroundings.",
@@ -183,7 +175,6 @@
           }
         },
         {
-          "id": "sidewinder-rattlesnake",
           "name": "Sidewinder Rattlesnake",
           "image": "img/Rattlesnake.jpg",
           "alt": "A Sidewinder Rattlesnake just below the surface of the sand ready to strike.",
@@ -210,7 +201,6 @@
           }
         },
         {
-          "id": "elf-owl",
           "name": "Elf Owl",
           "image": "img/ElfOwl.jpg",
           "alt": "An elf owl peeking out of its burrow in a cactus.",
@@ -239,7 +229,6 @@
       ]
     },
     {
-      "id": "forest",
       "title": "Lights Out - Forest",
       "name": "Forest",
       "image": "img/GreatHornedOwl.jpg",
@@ -248,7 +237,6 @@
       "heroAlt": "Forest skyline, fading into the stars at sunset.",
       "animals": [
         {
-          "id": "great-horned-owl",
           "name": "Great Horned Owl",
           "image": "img/GreatHornedOwl.jpg",
           "alt": "A Great Horned Owl looking down from a branch in the trees, staring tensely into the camera.",
@@ -275,7 +263,6 @@
           }
         },
         {
-          "id": "flying-squirrel",
           "name": "Flying Squirrel",
           "image": "img/FlyingSquirrel.jpg",
           "alt": "A flying squirrel climbing a horizontal branch.",
@@ -302,7 +289,6 @@
           }
         },
         {
-          "id": "firefly",
           "name": "Firefly",
           "image": "img/FireFly.jpg",
           "alt": "A firefly in the daytime on a blade of grass.",
@@ -329,7 +315,6 @@
           }
         },
         {
-          "id": "luna-moth",
           "name": "Luna Moth",
           "image": "img/LunaMoth.jpg",
           "alt": "A luna moth perfectly centered in the image on a tree.",
@@ -358,7 +343,6 @@
       ]
     },
     {
-      "id": "coastal",
       "title": "Lights Out - Coastal",
       "name": "Coastal",
       "image": "img/SeaTurtle.jpg",
@@ -367,7 +351,6 @@
       "heroAlt": "Coastal skyline, fading into the stars at sunset.",
       "animals": [
         {
-          "id": "sea-turtle",
           "name": "Loggerhead Sea Turtle",
           "image": "img/SeaTurtle.jpg",
           "alt": "A baby loggerhead sea turtle traveling from the right side of the screen to the left in golden sand.",
@@ -394,7 +377,6 @@
           }
         },
         {
-          "id": "ghost-crab",
           "name": "Ghost Crab",
           "image": "img/GhostCrab.jpg",
           "alt": "A ghost crab on sand staring into the camera.",
@@ -421,7 +403,6 @@
           }
         },
         {
-          "id": "beach-mouse",
           "name": "Beach Mouse",
           "image": "img/BeachMouse.jpg",
           "alt": "A beach mouse hiding under a rock, nestled behind a few dried blades of grass.",
@@ -448,7 +429,6 @@
           }
         },
         {
-          "id": "shearwater",
           "name": "Shearwater",
           "image": "img/Shearwater.jpg",
           "alt": "Two shearwaters soaring through the sky in different directions over the open ocean.",
