@@ -1,55 +1,40 @@
-/*
- * Main logic for the two-step process of selecting environments and animals.
-*/
+//fetching environments once
+const environmentsPromise = fetch('js/environments.json')
+    .then(response => response.json())
+    .then(data => data.environments)
+    .catch(function(error) {
+        console.error('Error fetching Environment content:', error);
+    });
 
 // variables for keeping track of step process
-isEnvironment = true;
-environmentIndex = -1;
+let isEnvironment = true;
+let environmentIndex = -1;
 
-//adding event listeners to buttons based on previous step
-for(let i = 0; i < 4; i++) {
-    const cardButton = document.querySelector(`#card${i + 1}`);
 
-    cardButton.addEventListener('click', function() {
-        // fetching environments json object promise 
-        fetch('js/environments.json')
-        .then(function(response) {
-            // parsing promise to json object
-            return response.json();
-        })
-        .then(function(data) {
-            //retrieving environments object from .json
-            environments = data.environments;
+// Initializes the two-step process by setting up event listeners and updating the back button.
+async function init() {
+    updateBackButton();
 
-            //checking which step we are on, keeping track of step, and adding listeners accordingly
+    const environments = await environmentsPromise;
+    const cards = document.querySelectorAll('.two-step-card');
+
+    cards.forEach((card, index) => {
+        card.addEventListener('click', function() {
             if(isEnvironment) {
-                environmentIndex = i;
+                environmentIndex = index;
 
                 changeHero(environments[environmentIndex]);
+                setAnimals(environments[environmentIndex]);
                 
-                setAnimals(environments[environmentIndex])
-
-                backToEnvironments();
-
-                //set for keeping track of the current step in the two-step process
                 isEnvironment = false;
+                updateBackButton();
             } else {
-                //adds listener for second step of getting the animal
-                getAnimal(environments[environmentIndex].animals[i])
+                getAnimal(environments[environmentIndex].animals[index])
             }
-
-        }).catch(function(error) {
-            console.error('Error fetching Environment content:', error);
         });
     });
 }
 
-
-
-
-/*
-    Two-step process functions.
-*/
 
 // adds listeners and action for first step of getting environment
 function setAnimals(environment) {  
@@ -96,21 +81,21 @@ function envToAnimals(animal, cardNum) {
     parent.replaceChild(strong, imgChild);
 }
 
-
-
-/* 
-   Navigation and back button functionality.
-*/
-
-// event listener for back to home button
-document.querySelector('#twoStep-back').addEventListener('click', function() {
-    window.location.href = 'index.html';
+// Sets the back button functionality based on the current step.
+const backButtonElement = document.querySelector('#twoStep-back');
+backButtonElement.addEventListener('click', () => {
+    if (isEnvironment) {
+        window.location.href = 'index.html';
+    } else {
+        window.location.reload();
+    }
 });
 
-//swaps the back button from back to lights out to back to environments
-function backToEnvironments() {
-    let backButton = document.querySelector('#twoStep-back');
-    backButton.textContent = "Back to Environments"
-
-    backButton.addEventListener('click', () => location.reload());
+// Updates the back button text based on the current step.
+function updateBackButton() {
+    backButtonElement.textContent = isEnvironment
+        ? 'Back to Lights Out'
+        : 'Back to Environments';
 }
+
+init();
