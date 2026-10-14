@@ -1,4 +1,6 @@
-//fetching environments once
+// >>>>>>>>>>>>>>>>>>>>>>> 
+//  Fetching Environments 
+// <<<<<<<<<<<<<<<<<<<<<<<
 const environmentsPromise = fetch('js/environments.json')
     .then(response => response.json())
     .then(data => data.environments)
@@ -6,6 +8,11 @@ const environmentsPromise = fetch('js/environments.json')
         console.error('Error fetching Environment content:', error);
     });
 
+
+
+// >>>>>>>>>>>>>>>>>>>>>>> 
+//    Two-Step Process
+// <<<<<<<<<<<<<<<<<<<<<<<
 // variables for keeping track of step process
 let isEnvironment = true;
 let environmentIndex = -1;
@@ -21,22 +28,33 @@ async function init() {
     cards.forEach((card, index) => {
         card.addEventListener('click', function() {
             if(isEnvironment) {
+                // setting environment index to the clicked card so we know which environment was selected for the second step
                 environmentIndex = index;
-
-                changeHero(environments[environmentIndex]);
-                setAnimals(environments[environmentIndex]);
-                
-                isEnvironment = false;
-                updateBackButton();
+                stepOne(environments[environmentIndex]);
             } else {
-                getAnimal(environments[environmentIndex].animals[index])
+                renderAnimal(environments[environmentIndex].animals[index])
             }
         });
     });
 }
 
 
-// adds listeners and action for first step of getting environment
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//  Step One: Environment Selection
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+// Transition from environment selection to animal selection.
+function stepOne(environment) {
+    changeTitle(environment);
+    changeHeroImage(environment);
+    changeHeroTitle(environment);
+    setAnimals(environment);
+
+    isEnvironment = false;
+    updateBackButton();
+}
+
+// Sets the animal cards for the selected environment.
 function setAnimals(environment) {  
     // for each card we are going to change to the respective environments to animals when clicked.
     for(let j = 0; j < 4; j++) {
@@ -45,20 +63,7 @@ function setAnimals(environment) {
     }
 }
 
-// changes the hero image to the resepective environment
-function changeHero(environment) {
-     //swap the hero image out. 
-    let heroImage = document.querySelector('.hero-image');
-    heroImage.setAttribute('src', environment.heroImage);
-    heroImage.setAttribute('alt', environment.heroAlt);
-}
-
-// adds listener and action for second step of getting animal
-function getAnimal(animal) {
-    console.log(animal);
-}
-
-// function to replace environment cards with animal cards
+// Swapping image and title elements for the environment to animal card step.
 function envToAnimals(animal, cardNum) {
     //creating new image element
     let image = document.createElement('img');
@@ -81,6 +86,66 @@ function envToAnimals(animal, cardNum) {
     parent.replaceChild(strong, imgChild);
 }
 
+
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//  Step Two: Animal Selection
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// renders the final endpoint for an animal.
+function renderAnimal(animal) {
+    // Get references to the main sections of the page
+    const head = document.querySelector('head');
+    const header = document.querySelector('header');
+    const main = document.querySelector('main');
+    const footer = document.querySelector('footer');
+
+    clearMain();
+    changeTitle(animal);
+    changeHeroTitle(animal);
+
+
+}
+
+
+
+// >>>>>>>>>>>>>
+//    Helpers
+// <<<<<<<<<<<<<
+
+// Changes the document title.
+function changeTitle(item) {
+    const titleElement = document.querySelector('title');
+    titleElement.textContent = item.title;
+}
+
+// Clears the main content area of the page.
+function clearMain() {
+    const main = document.querySelector('main');
+    main.innerHTML = '';
+}
+
+// Swaps the hero image to the resepective environment
+function changeHeroImage(item) { 
+    let heroImage = document.querySelector('.hero-image');
+    heroImage.setAttribute('src', item.heroImage);
+    heroImage.setAttribute('alt', item.heroAlt);
+}
+
+// Changes the hero title
+function changeHeroTitle(item) {
+    let heroTitle = document.querySelector('.hero-title');
+    heroTitle.textContent = item.name;
+}
+
+
+
+
+
+// >>>>>>>>>>>>>>>>>
+// Back Button Functionality
+// <<<<<<<<<<<<<<<
+
 // Sets the back button functionality based on the current step.
 const backButtonElement = document.querySelector('#twoStep-back');
 backButtonElement.addEventListener('click', () => {
@@ -98,4 +163,8 @@ function updateBackButton() {
         : 'Back to Environments';
 }
 
+
+// >>>>>>>>>>>>>>>>>
+//  Initialization
+// <<<<<<<<<<<<<<<<<
 init();
