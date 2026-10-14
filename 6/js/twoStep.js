@@ -32,7 +32,7 @@ async function init() {
                 environmentIndex = index;
                 stepOne(environments[environmentIndex]);
             } else {
-                renderAnimal(environments[environmentIndex].animals[index])
+                stepTwo(environments[environmentIndex].animals[index])
             }
         });
     });
@@ -92,19 +92,76 @@ function envToAnimals(animal, cardNum) {
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //  Step Two: Animal Selection
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<
-// renders the final endpoint for an animal.
-function renderAnimal(animal) {
-    // Get references to the main sections of the page
-    const head = document.querySelector('head');
-    const header = document.querySelector('header');
-    const main = document.querySelector('main');
-    const footer = document.querySelector('footer');
 
-    clearMain();
+// renders the final endpoint for an animal.
+function stepTwo(animal) {
     changeTitle(animal);
     changeHeroTitle(animal);
 
+    renderAnimal(animal);
+}
 
+function renderAnimal(animal) {
+    clearMain();
+    const main = document.querySelector('main');
+    
+
+    // Adding the animal endpoint
+    addSectionBar(main);
+    main.innerHTML += `
+        <section class="content-box" aria-label="Little brown bat photograph">
+            <figure class="animal-profile-pic">
+                <img class="wide-img-window" src=${animal.image} alt="${animal.alt}">
+                <figcaption>${animal.name}. Source: <a href="https://www.pexels.com/">Pexels.com</a></figcaption>
+            </figure>
+        </section>
+    `;
+    addSectionBar(main);
+    main.innerHTML += `
+        <section class="content-box" aria-label="${animal.name} information">
+            <div class="animal-info">
+                <div class="animal-quick-facts">
+                    <h3>Quick Facts</h3>
+                    <div class="sub-section-bar" aria-hidden="true"></div>
+                    <ul>
+                        <li><strong>Size:</strong> ${animal.endpoint.quickFacts.size}</li>
+                        <li><strong>Weight:</strong> ${animal.endpoint.quickFacts.weight}</li>
+                        <li><strong>Lifespan:</strong> ${animal.endpoint.quickFacts.lifespan}</li>
+                        <li><strong>Conservation Status:</strong> ${animal.endpoint.quickFacts.conservationStatus}</li>
+                        <li><strong>Range:</strong> ${animal.endpoint.quickFacts.range}</li>
+                    </ul>
+                </div>
+                <div class="animal-description">
+                    <h3>Key Nighttime Adaptations</h3>
+                    <div class="sub-section-bar" aria-hidden="true"></div>
+                    <p>${animal.endpoint.adaptations}</p>
+                    <h3>Diet</h3>
+                    <div class="sub-section-bar" aria-hidden="true"></div>
+                    <p>${animal.endpoint.diet}</p>
+                    <h3>Role in Ecosystem</h3>
+                    <div class="sub-section-bar" aria-hidden="true"></div>
+                    <p>${animal.endpoint.role}</p>
+                    <div class="animal-fun-fact"><p><strong>Fun Fact:</strong> ${animal.endpoint.funFact}</p></div>
+                </div>
+                <figure class="animal-range-map">
+                    <img class="wide-img-window" src="${animal.endpoint.rangeMap}" alt="${animal.endpoint.rangeMapAlt}">
+                    <figcaption>${animal.endpoint.rangeMapCaption}
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+    `;
+    addSectionBar(main);
+    main.innerHTML += `
+        <section class="content-box" aria-label="${animal.endpoint.effectTitle}">
+            <div class="animal-light-effect">
+                <h3 class="change glow">${animal.endpoint.effectTitle}</h3>
+                <p>${animal.endpoint.effectDescription}</p>
+            </div>
+            <a class="button" href="index.html">${animal.endpoint.back}</a>
+        </section>
+    `;
+    addSectionBar(main);
 }
 
 
@@ -136,6 +193,13 @@ function changeHeroImage(item) {
 function changeHeroTitle(item) {
     let heroTitle = document.querySelector('.hero-title');
     heroTitle.textContent = item.name;
+}
+
+// adds a section bar (horizontal rule) to the specified element.
+function addSectionBar(element) {
+    let bar = document.createElement('hr');
+    bar.classList.add('section-bar');
+    element.appendChild(bar);
 }
 
 
