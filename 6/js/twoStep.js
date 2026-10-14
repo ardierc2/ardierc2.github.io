@@ -1,6 +1,8 @@
 // >>>>>>>>>>>>>>>>>>>>>>> 
 //  Fetching Environments 
 // <<<<<<<<<<<<<<<<<<<<<<<
+
+// Fetching the environments JSON file and storing it as a promise.
 const environmentsPromise = fetch('js/environments.json')
     .then(response => response.json())
     .then(data => data.environments)
@@ -13,18 +15,20 @@ const environmentsPromise = fetch('js/environments.json')
 // >>>>>>>>>>>>>>>>>>>>>>> 
 //    Two-Step Process
 // <<<<<<<<<<<<<<<<<<<<<<<
+
 // variables for keeping track of step process
 let isEnvironment = true;
 let environmentIndex = -1;
-
 
 // Initializes the two-step process by setting up event listeners and updating the back button.
 async function init() {
     updateBackButton();
 
+    // Waiting for the environments data to be fetched before setting up the event listeners.
     const environments = await environmentsPromise;
     const cards = document.querySelectorAll('.two-step-card');
 
+    // Adding click event listeners to each card for the two-step selection process.
     cards.forEach((card, index) => {
         card.addEventListener('click', function() {
             if(isEnvironment) {
@@ -57,7 +61,7 @@ function stepOne(environment) {
 // Sets the animal cards for the selected environment.
 function setAnimals(environment) {  
     // for each card we are going to change to the respective environments to animals when clicked.
-    for(let j = 0; j < 4; j++) {
+    for(let j = 0; j < environment.animals.length; j++) {
         const animal = environment.animals[j];
         envToAnimals(animal, j + 1);
     }
@@ -97,10 +101,12 @@ function envToAnimals(animal, cardNum) {
 function stepTwo(animal) {
     changeTitle(animal);
     changeHeroTitle(animal);
-
     renderAnimal(animal);
+
+    setAnimalEndpointBackButton();
 }
 
+// Renders the detailed information for the selected animal.
 function renderAnimal(animal) {
     clearMain();
     const main = document.querySelector('main');
@@ -158,7 +164,7 @@ function renderAnimal(animal) {
                 <h3 class="change glow">${animal.endpoint.effectTitle}</h3>
                 <p>${animal.endpoint.effectDescription}</p>
             </div>
-            <a class="button" href="index.html">${animal.endpoint.back}</a>
+            <button class="button" id="animal-back">Back to Environments</button>
         </section>
     `;
     addSectionBar(main);
@@ -205,10 +211,9 @@ function addSectionBar(element) {
 
 
 
-
-// >>>>>>>>>>>>>>>>>
+// >>>>>>>>>>>>>>>>>>>>>>>>>>
 // Back Button Functionality
-// <<<<<<<<<<<<<<<
+// <<<<<<<<<<<<<<<<<<<<<<<<<<
 
 // Sets the back button functionality based on the current step.
 const backButtonElement = document.querySelector('#twoStep-back');
@@ -225,6 +230,15 @@ function updateBackButton() {
     backButtonElement.textContent = isEnvironment
         ? 'Back to Lights Out'
         : 'Back to Environments';
+}
+
+// Sets the animal endpoint functionality.
+function setAnimalEndpointBackButton() {
+    const animalBackButton = document.querySelector('#animal-back');
+
+    animalBackButton.addEventListener('click', () => {
+        window.location.href = 'twoStep.html';
+    });
 }
 
 

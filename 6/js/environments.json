@@ -15,7 +15,7 @@
           "endpoint": {
             "title": "Lights Out - Little Brown Bat",
             "caption": "Little brown bat. Source: <a href=\"https://www.pexels.com/\">Pexels.com</a>",
-            "quick-facts":{
+            "quickFacts":{
               "size": "2.5-4 inches",
               "weight": "5-14 grams",
               "lifespan": "6-10 years; Some exceed 30 years.",
@@ -25,7 +25,7 @@
             "adaptations": "Little brown bats use echolocation to navigate and find insects in darkness. The bats' large ears give them incredible echo location capabilities. This guides their movements as they fly and helps them locate food invisible to the eye in the dark of the night.",
             "diet": "They are insectivores that forage after sunset, often over water. A bat can eat hundreds of small insects in a night.",
             "role": "By consuming insects, little brown bats are part of the natural controls on insect populations. These bats are not the top of the food chain however. They are a food source for owls and hawks.",
-            "fun-fact": "Males consume their own body weight in food every day, nursing females can consume even more.",
+            "funFact": "Males consume their own body weight in food every day, nursing females can consume even more.",
             "rangeMap": "img/LittleBrownBatRange.png",
             "rangeMapAlt": "Range map for the little brown bat.",
             "rangeMapCaption": "Little brown bat range map. <a href=\"https://commons.wikimedia.org/wiki/File:Distribution_of_Myotis_lucifugus.png\">A proietti</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0\">CC BY-SA 3.0</a>, via Wikimedia Commons",
@@ -309,8 +309,8 @@
             "rangeMap": "img/FireflyRange.jpeg",
             "rangeMapAlt": "Range map for fireflies.",
             "rangeMapCaption": "Firefly range map; distributions vary by species. <a href=\"https://news.mongabay.com/2021/03/new-assessment-shines-a-light-on-the-state-of-north-americas-fireflies/\">Mongabay News</a>",
-            "effect-title": "Light Pollution's Effect on Fireflies",
-            "effect-description": "Artificial light at night has been detrimental to fireflies. Due to the interfering artificial light, they are unable to communicate, find mates, or reproduce. In recent years, firefly populations have decreased drastically.",
+            "effectTitle": "Light Pollution's Effect on Fireflies",
+            "effectDescription": "Artificial light at night has been detrimental to fireflies. Due to the interfering artificial light, they are unable to communicate, find mates, or reproduce. In recent years, firefly populations have decreased drastically.",
             "back": "Back to Forest Environment"
           }
         },
@@ -335,7 +335,7 @@
             "rangeMap": "img/LunaMothRange.jpg",
             "rangeMapAlt": "Range map for the luna moth.",
             "rangeMapCaption": "Luna moth range map. <a href=\"https://doi.org/10.15468/dl.mphuwq\">GBIF.org</a>",
-            "effect-title": "Light Pollution's Effect on Luna Moths",
+            "effectTitle": "Light Pollution's Effect on Luna Moths",
             "effectDescription": "Light pollution has greatly disrupted Luna moths' mating and reproductive abilities. The moths only live a short time as adults capable of reproduction. If that time is spent chasing artificial lights rather than mating, they miss their chance to reproduce at all. This issue has led to a major decline in the species numbers in recent years.",
             "back": "Back to Forest Environment"
           }
