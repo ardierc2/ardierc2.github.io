@@ -10,6 +10,7 @@ const environmentsPromise = fetch('js/environments.json')
         console.error('Error fetching Environment content:', error);
     });
 
+    
 
 
 // >>>>>>>>>>>>>>>>>>>>>>> 
@@ -41,6 +42,8 @@ async function init() {
         });
     });
 }
+
+
 
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -108,6 +111,8 @@ function stepTwo(animal) {
 
 // Renders the detailed information for the selected animal.
 function renderAnimal(animal) {
+    const endpoint = animal.endpoint;
+    
     clearMain();
     const main = document.querySelector('main');
     
@@ -130,28 +135,28 @@ function renderAnimal(animal) {
                     <h3>Quick Facts</h3>
                     <div class="sub-section-bar" aria-hidden="true"></div>
                     <ul>
-                        <li><strong>Size:</strong> ${animal.endpoint.quickFacts.size}</li>
-                        <li><strong>Weight:</strong> ${animal.endpoint.quickFacts.weight}</li>
-                        <li><strong>Lifespan:</strong> ${animal.endpoint.quickFacts.lifespan}</li>
-                        <li><strong>Conservation Status:</strong> ${animal.endpoint.quickFacts.conservationStatus}</li>
-                        <li><strong>Range:</strong> ${animal.endpoint.quickFacts.range}</li>
+                        <li><strong>Size:</strong> ${endpoint.quickFacts.size}</li>
+                        <li><strong>Weight:</strong> ${endpoint.quickFacts.weight}</li>
+                        <li><strong>Lifespan:</strong> ${endpoint.quickFacts.lifespan}</li>
+                        <li><strong>Conservation Status:</strong> ${endpoint.quickFacts.conservationStatus}</li>
+                        <li><strong>Range:</strong> ${endpoint.quickFacts.range}</li>
                     </ul>
                 </div>
                 <div class="animal-description">
                     <h3>Key Nighttime Adaptations</h3>
                     <div class="sub-section-bar" aria-hidden="true"></div>
-                    <p>${animal.endpoint.adaptations}</p>
+                    <p>${endpoint.adaptations}</p>
                     <h3>Diet</h3>
                     <div class="sub-section-bar" aria-hidden="true"></div>
-                    <p>${animal.endpoint.diet}</p>
+                    <p>${endpoint.diet}</p>
                     <h3>Role in Ecosystem</h3>
                     <div class="sub-section-bar" aria-hidden="true"></div>
-                    <p>${animal.endpoint.role}</p>
-                    <div class="animal-fun-fact"><p><strong>Fun Fact:</strong> ${animal.endpoint.funFact}</p></div>
+                    <p>${endpoint.role}</p>
+                    <div class="animal-fun-fact"><p><strong>Fun Fact:</strong> ${endpoint.funFact}</p></div>
                 </div>
                 <figure class="animal-range-map">
-                    <img class="wide-img-window" src="${animal.endpoint.rangeMap}" alt="${animal.endpoint.rangeMapAlt}">
-                    <figcaption>${animal.endpoint.rangeMapCaption}
+                    <img class="wide-img-window" src="${endpoint.rangeMap}" alt="${endpoint.rangeMapAlt}">
+                    <figcaption>${endpoint.rangeMapCaption}
                     </figcaption>
                 </figure>
             </div>
@@ -159,16 +164,17 @@ function renderAnimal(animal) {
     `;
     addSectionBar(main);
     main.innerHTML += `
-        <section class="content-box" aria-label="${animal.endpoint.effectTitle}">
+        <section class="content-box" aria-label="${endpoint.effectTitle}">
             <div class="animal-light-effect">
-                <h3 class="change glow">${animal.endpoint.effectTitle}</h3>
-                <p>${animal.endpoint.effectDescription}</p>
+                <h3 class="change glow">${endpoint.effectTitle}</h3>
+                <p>${endpoint.effectDescription}</p>
             </div>
             <button class="button" id="animal-back">Back to Environments</button>
         </section>
     `;
     addSectionBar(main);
 }
+
 
 
 
@@ -240,6 +246,8 @@ function setAnimalEndpointBackButton() {
         window.location.href = 'twoStep.html';
     });
 }
+
+
 
 
 // >>>>>>>>>>>>>>>>>
