@@ -1,3 +1,7 @@
+/*
+ * Main logic for the two-step process of selecting environments and animals.
+*/
+
 // variables for keeping track of step process
 isEnvironment = true;
 environmentIndex = -1;
@@ -20,11 +24,15 @@ for(let i = 0; i < 4; i++) {
             //checking which step we are on, keeping track of step, and adding listeners accordingly
             if(isEnvironment) {
                 environmentIndex = i;
-                
-                //adds listener for first step of getting environment 
-                setAnimals(environments[environmentIndex])
-                isEnvironment = false;
 
+                changeHero(environments[environmentIndex]);
+                
+                setAnimals(environments[environmentIndex])
+
+                backToEnvironments();
+
+                //set for keeping track of the current step in the two-step process
+                isEnvironment = false;
             } else {
                 //adds listener for second step of getting the animal
                 getAnimal(environments[environmentIndex].animals[i])
@@ -37,6 +45,12 @@ for(let i = 0; i < 4; i++) {
 }
 
 
+
+
+/*
+    Two-step process functions.
+*/
+
 // adds listeners and action for first step of getting environment
 function setAnimals(environment) {  
     // for each card we are going to change to the respective environments to animals when clicked.
@@ -44,16 +58,20 @@ function setAnimals(environment) {
         const animal = environment.animals[j];
         envToAnimals(animal, j + 1);
     }
+}
 
-    
+// changes the hero image to the resepective environment
+function changeHero(environment) {
+     //swap the hero image out. 
+    let heroImage = document.querySelector('.hero-image');
+    heroImage.setAttribute('src', environment.heroImage);
+    heroImage.setAttribute('alt', environment.heroAlt);
 }
 
 // adds listener and action for second step of getting animal
 function getAnimal(animal) {
     console.log(animal);
 }
-
-
 
 // function to replace environment cards with animal cards
 function envToAnimals(animal, cardNum) {
@@ -78,7 +96,21 @@ function envToAnimals(animal, cardNum) {
     parent.replaceChild(strong, imgChild);
 }
 
+
+
+/* 
+   Navigation and back button functionality.
+*/
+
 // event listener for back to home button
 document.querySelector('#twoStep-back').addEventListener('click', function() {
     window.location.href = 'index.html';
 });
+
+//swaps the back button from back to lights out to back to environments
+function backToEnvironments() {
+    let backButton = document.querySelector('#twoStep-back');
+    backButton.textContent = "Back to Environments"
+
+    backButton.addEventListener('click', () => location.reload());
+}
