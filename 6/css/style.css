@@ -344,19 +344,13 @@ figcaption {
 }
 
 .two-step-card:hover{
-    transform:scale(1.05);
+    transform:scale(1.035);
     box-shadow: 0 4px 8px rgba(255, 165, 0, 0.5);
     transition: transform 0.3s ease;
 }
 
 .two-step-card {
     transition: transform 0.2s ease;
-}
-
-.two-step-card:active {
-    transform: scale(1);
-    box-shadow: 0 2px 4px rgba(255, 165, 0, 0.5);
-    transition: transform 0.1s ease;
 }
 
 /* 
