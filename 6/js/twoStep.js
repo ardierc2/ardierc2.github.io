@@ -3,7 +3,7 @@
 // <<<<<<<<<<<<<<<<<<<<<<<
 
 // Fetching the environments JSON file and storing it as a promise.
-const environmentsPromise = fetch('js/environments.json')
+const ENVIRONMENTS_PROMISE = fetch('js/environments.json')
     .then(response => response.json())
     .then(data => data.environments)
     .catch(function(error) {
@@ -30,34 +30,34 @@ let environmentIndex = -1;
 
 // Changes the document title.
 function changeTitle(item) {
-    const titleElement = document.querySelector('title');
-    titleElement.textContent = item.title;
+    const TITLE_ELEMENT = document.querySelector('title');
+    TITLE_ELEMENT.textContent = item.title;
 }
 
 // Clears the main content area of the page.
 function clearMain() {
-    const main = document.querySelector('main');
-    main.innerHTML = '';
+    const MAIN = document.querySelector('main');
+    MAIN.innerHTML = '';
 }
 
 // Swaps the hero image to the resepective environment
 function changeHeroImage(item) { 
-    let heroImage = document.querySelector('.hero-image');
-    heroImage.setAttribute('src', item.heroImage);
-    heroImage.setAttribute('alt', item.heroAlt);
+    const HERO_IMAGE = document.querySelector('.hero-image');
+    HERO_IMAGE.setAttribute('src', item.heroImage);
+    HERO_IMAGE.setAttribute('alt', item.heroAlt);
 }
 
 // Changes the hero title
 function changeHeroTitle(item) {
-    let heroTitle = document.querySelector('.hero-title');
-    heroTitle.textContent = item.name;
+    const HERO_TITLE = document.querySelector('.hero-title');
+    HERO_TITLE.textContent = item.name;
 }
 
 // adds a section bar (horizontal rule) to the specified element.
 function addSectionBar(element) {
-    let bar = document.createElement('hr');
-    bar.classList.add('section-bar');
-    element.appendChild(bar);
+    const BAR = document.createElement('hr');
+    BAR.classList.add('section-bar');
+    element.appendChild(BAR);
 }
 
 
@@ -68,8 +68,8 @@ function addSectionBar(element) {
 // <<<<<<<<<<<<<<<<<<<<<<<<<<
 
 // Sets the back button functionality based on the current step.
-const backButtonElement = document.querySelector('#twoStep-back');
-backButtonElement.addEventListener('click', () => {
+const BACK_BUTTON_ELEMENT = document.querySelector('#twoStep-back');
+BACK_BUTTON_ELEMENT.addEventListener('click', () => {
     if (isEnvironment) {
         window.location.href = 'index.html';
     } else {
@@ -79,16 +79,16 @@ backButtonElement.addEventListener('click', () => {
 
 // Updates the back button text based on the current step.
 function updateBackButton() {
-    backButtonElement.textContent = isEnvironment
+    BACK_BUTTON_ELEMENT.textContent = isEnvironment
         ? 'Back to Lights Out'
         : 'Back to Environments';
 }
 
 // Sets the animal endpoint functionality.
 function setAnimalEndpointBackButton() {
-    const animalBackButton = document.querySelector('#animal-back');
+    const ANIMAL_BACK_BUTTON = document.querySelector('#animal-back');
 
-    animalBackButton.addEventListener('click', () => {
+    ANIMAL_BACK_BUTTON.addEventListener('click', () => {
         window.location.href = 'twoStep.html';
     });
 }
@@ -103,32 +103,32 @@ function setAnimalEndpointBackButton() {
 // Swapping image and title elements for the environment to animal card step.
 function envToAnimals(animal, cardNum) {
     //creating new image element
-    let image = document.createElement('img');
-    image.src = animal.image;
-    image.alt = animal.alt;
-    image.classList.add('wide-img-window');
+    const IMAGE = document.createElement('img');
+    IMAGE.src = animal.image;
+    IMAGE.alt = animal.alt;
+    IMAGE.classList.add('wide-img-window');
 
     //creating new card title element
-    let strong = document.createElement('strong');
-    strong.textContent = animal.name;
-    strong.classList.add('two-step-title');
+    const STRONG = document.createElement('strong');
+    STRONG.textContent = animal.name;
+    STRONG.classList.add('two-step-title');
 
     //getting child and parent elements for swap. 
-    let imgChild = document.querySelector(`#card${cardNum} img`);
-    let strongChild = document.querySelector(`#card${cardNum} strong`);
-    let parent = imgChild.parentNode;
+    const IMG_CHILD = document.querySelector(`#card${cardNum} img`);
+    const STRONG_CHILD = document.querySelector(`#card${cardNum} strong`);
+    const PARENT = IMG_CHILD.parentNode;
 
     //swapping image and title elements with new information and order.
-    parent.replaceChild(image, strongChild);
-    parent.replaceChild(strong, imgChild);
+    PARENT.replaceChild(IMAGE, STRONG_CHILD);
+    PARENT.replaceChild(STRONG, IMG_CHILD);
 }
 
 // Sets the animal cards for the selected environment.
 function setAnimals(environment) {  
     // for each card we are going to change to the respective environments to animals when clicked.
     for(let j = 0; j < environment.animals.length; j++) {
-        const animal = environment.animals[j];
-        envToAnimals(animal, j + 1);
+        const ANIMAL = environment.animals[j];
+        envToAnimals(ANIMAL, j + 1);
     }
 }
 
@@ -152,15 +152,15 @@ function stepOne(environment) {
 
 // Renders the detailed information for the selected animal.
 function renderAnimal(animal) {
-    const endpoint = animal.endpoint;
+    const ENDPOINT = animal.endpoint;
     
     clearMain();
-    const main = document.querySelector('main');
+    const MAIN = document.querySelector('main');
     
 
     // Adding the animal endpoint
-    addSectionBar(main);
-    main.innerHTML += `
+    addSectionBar(MAIN);
+    MAIN.innerHTML += `
         <section class="content-box" aria-label="Little brown bat photograph">
             <figure class="animal-profile-pic">
                 <img class="wide-img-window" src=${animal.image} alt="${animal.alt}">
@@ -168,52 +168,52 @@ function renderAnimal(animal) {
             </figure>
         </section>
     `;
-    addSectionBar(main);
-    main.innerHTML += `
+    addSectionBar(MAIN);
+    MAIN.innerHTML += `
         <section class="content-box" aria-label="${animal.name} information">
             <div class="animal-info">
                 <div class="animal-quick-facts">
                     <h3>Quick Facts</h3>
                     <div class="sub-section-bar" aria-hidden="true"></div>
                     <ul>
-                        <li><strong>Size:</strong> ${endpoint.quickFacts.size}</li>
-                        <li><strong>Weight:</strong> ${endpoint.quickFacts.weight}</li>
-                        <li><strong>Lifespan:</strong> ${endpoint.quickFacts.lifespan}</li>
-                        <li><strong>Conservation Status:</strong> ${endpoint.quickFacts.conservationStatus}</li>
-                        <li><strong>Range:</strong> ${endpoint.quickFacts.range}</li>
+                        <li><strong>Size:</strong> ${ENDPOINT.quickFacts.size}</li>
+                        <li><strong>Weight:</strong> ${ENDPOINT.quickFacts.weight}</li>
+                        <li><strong>Lifespan:</strong> ${ENDPOINT.quickFacts.lifespan}</li>
+                        <li><strong>Conservation Status:</strong> ${ENDPOINT.quickFacts.conservationStatus}</li>
+                        <li><strong>Range:</strong> ${ENDPOINT.quickFacts.range}</li>
                     </ul>
                 </div>
                 <div class="animal-description">
                     <h3>Key Nighttime Adaptations</h3>
                     <div class="sub-section-bar" aria-hidden="true"></div>
-                    <p>${endpoint.adaptations}</p>
+                    <p>${ENDPOINT.adaptations}</p>
                     <h3>Diet</h3>
                     <div class="sub-section-bar" aria-hidden="true"></div>
-                    <p>${endpoint.diet}</p>
+                    <p>${ENDPOINT.diet}</p>
                     <h3>Role in Ecosystem</h3>
                     <div class="sub-section-bar" aria-hidden="true"></div>
-                    <p>${endpoint.role}</p>
-                    <div class="animal-fun-fact"><p><strong>Fun Fact:</strong> ${endpoint.funFact}</p></div>
+                    <p>${ENDPOINT.role}</p>
+                    <div class="animal-fun-fact"><p><strong>Fun Fact:</strong> ${ENDPOINT.funFact}</p></div>
                 </div>
                 <figure class="animal-range-map">
-                    <img class="wide-img-window" src="${endpoint.rangeMap}" alt="${endpoint.rangeMapAlt}">
-                    <figcaption>${endpoint.rangeMapCaption}
+                    <img class="wide-img-window" src="${ENDPOINT.rangeMap}" alt="${ENDPOINT.rangeMapAlt}">
+                    <figcaption>${ENDPOINT.rangeMapCaption}
                     </figcaption>
                 </figure>
             </div>
         </section>
     `;
-    addSectionBar(main);
-    main.innerHTML += `
-        <section class="content-box" aria-label="${endpoint.effectTitle}">
+    addSectionBar(MAIN);
+    MAIN.innerHTML += `
+        <section class="content-box" aria-label="${ENDPOINT.effectTitle}">
             <div class="animal-light-effect">
-                <h3 class="change glow">${endpoint.effectTitle}</h3>
-                <p>${endpoint.effectDescription}</p>
+                <h3 class="change glow">${ENDPOINT.effectTitle}</h3>
+                <p>${ENDPOINT.effectDescription}</p>
             </div>
             <button class="button" id="animal-back">Back to Environments</button>
         </section>
     `;
-    addSectionBar(main);
+    addSectionBar(MAIN);
 }
 
 // renders the final endpoint for an animal.
@@ -237,18 +237,18 @@ async function init() {
     updateBackButton();
 
     // Waiting for the environments data to be fetched before setting up the event listeners.
-    const environments = await environmentsPromise;
-    const cards = document.querySelectorAll('.two-step-card');
+    const ENVIRONMENTS = await ENVIRONMENTS_PROMISE;
+    const CARDS = document.querySelectorAll('.two-step-card');
 
     // Adding click event listeners to each card for the two-step selection process.
-    cards.forEach((card, index) => {
+    CARDS.forEach((card, index) => {
         card.addEventListener('click', function() {
             if(isEnvironment) {
                 // setting environment index to the clicked card so we know which environment was selected for the second step
                 environmentIndex = index;
-                stepOne(environments[environmentIndex]);
+                stepOne(ENVIRONMENTS[environmentIndex]);
             } else {
-                stepTwo(environments[environmentIndex].animals[index])
+                stepTwo(ENVIRONMENTS[environmentIndex].animals[index])
             }
         });
     });
