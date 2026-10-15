@@ -248,7 +248,7 @@ async function init() {
                 environmentIndex = index;
                 stepOne(ENVIRONMENTS[environmentIndex]);
             } else {
-                stepTwo(ENVIRONMENTS[environmentIndex].animals[index])
+                stepTwo(ENVIRONMENTS[environmentIndex].animals[index]);
             }
         });
     });
