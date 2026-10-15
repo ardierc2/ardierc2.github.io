@@ -218,7 +218,7 @@ function renderAnimal(animal) {
 
 // renders the final endpoint for an animal.
 function stepTwo(animal) {
-    changeTitle(animal);
+    changeTitle(animal.endpoint);
     changeHeroTitle(animal);
     renderAnimal(animal);
 
