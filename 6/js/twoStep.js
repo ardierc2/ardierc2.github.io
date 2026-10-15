@@ -160,62 +160,62 @@ function renderAnimal(animal) {
 
     // Creating the animal figure section for the profile picture and caption.
     const ANIMAL_FIGURE = document.createElement('section');
+    ANIMAL_FIGURE.classList.add('content-box');
+    ANIMAL_FIGURE.ariaLabel = `"${animal.name} photograph"`;
     ANIMAL_FIGURE.innerHTML = `
-        <section class="content-box" aria-label="Little brown bat photograph">
-            <figure class="animal-profile-pic">
-                <img class="wide-img-window" src=${animal.image} alt="${animal.alt}">
-                <figcaption>${animal.name}. Source: <a href="https://www.pexels.com/">Pexels.com</a></figcaption>
-            </figure>
-        </section>
+        <figure class="animal-profile-pic">
+            <img class="wide-img-window" src=${animal.image} alt="${animal.alt}">
+            <figcaption>${animal.name}. Source: <a href="https://www.pexels.com/">Pexels.com</a></figcaption>
+        </figure>
     `;
     
     // Creating the animal content section for detailed information.
     const  ANIMAL_CONTENT = document.createElement(`section`);
+    ANIMAL_CONTENT.classList.add('content-box');
+    ANIMAL_CONTENT.ariaLabel = `"${animal.name} information"`;
     ANIMAL_CONTENT.innerHTML = `
-        <section class="content-box" aria-label="${animal.name} information">
-            <div class="animal-info">
-                <div class="animal-quick-facts">
-                    <h3>Quick Facts</h3>
-                    <div class="sub-section-bar" aria-hidden="true"></div>
-                    <ul>
-                        <li><strong>Size:</strong> ${ENDPOINT.quickFacts.size}</li>
-                        <li><strong>Weight:</strong> ${ENDPOINT.quickFacts.weight}</li>
-                        <li><strong>Lifespan:</strong> ${ENDPOINT.quickFacts.lifespan}</li>
-                        <li><strong>Conservation Status:</strong> ${ENDPOINT.quickFacts.conservationStatus}</li>
-                        <li><strong>Range:</strong> ${ENDPOINT.quickFacts.range}</li>
-                    </ul>
-                </div>
-                <div class="animal-description">
-                    <h3>Key Nighttime Adaptations</h3>
-                    <div class="sub-section-bar" aria-hidden="true"></div>
-                    <p>${ENDPOINT.adaptations}</p>
-                    <h3>Diet</h3>
-                    <div class="sub-section-bar" aria-hidden="true"></div>
-                    <p>${ENDPOINT.diet}</p>
-                    <h3>Role in Ecosystem</h3>
-                    <div class="sub-section-bar" aria-hidden="true"></div>
-                    <p>${ENDPOINT.role}</p>
-                    <div class="animal-fun-fact"><p><strong>Fun Fact:</strong> ${ENDPOINT.funFact}</p></div>
-                </div>
-                <figure class="animal-range-map">
-                    <img class="wide-img-window" src="${ENDPOINT.rangeMap}" alt="${ENDPOINT.rangeMapAlt}">
-                    <figcaption>${ENDPOINT.rangeMapCaption}
-                    </figcaption>
-                </figure>
+        <div class="animal-info">
+            <div class="animal-quick-facts">
+                <h3>Quick Facts</h3>
+                <div class="sub-section-bar" aria-hidden="true"></div>
+                <ul>
+                    <li><strong>Size:</strong> ${ENDPOINT.quickFacts.size}</li>
+                    <li><strong>Weight:</strong> ${ENDPOINT.quickFacts.weight}</li>
+                    <li><strong>Lifespan:</strong> ${ENDPOINT.quickFacts.lifespan}</li>
+                    <li><strong>Conservation Status:</strong> ${ENDPOINT.quickFacts.conservationStatus}</li>
+                    <li><strong>Range:</strong> ${ENDPOINT.quickFacts.range}</li>
+                </ul>
             </div>
-        </section>
+            <div class="animal-description">
+                <h3>Key Nighttime Adaptations</h3>
+                <div class="sub-section-bar" aria-hidden="true"></div>
+                <p>${ENDPOINT.adaptations}</p>
+                <h3>Diet</h3>
+                <div class="sub-section-bar" aria-hidden="true"></div>
+                <p>${ENDPOINT.diet}</p>
+                <h3>Role in Ecosystem</h3>
+                <div class="sub-section-bar" aria-hidden="true"></div>
+                <p>${ENDPOINT.role}</p>
+                <div class="animal-fun-fact"><p><strong>Fun Fact:</strong> ${ENDPOINT.funFact}</p></div>
+            </div>
+            <figure class="animal-range-map">
+                <img class="wide-img-window" src="${ENDPOINT.rangeMap}" alt="${ENDPOINT.rangeMapAlt}">
+                <figcaption>${ENDPOINT.rangeMapCaption}
+                </figcaption>
+            </figure>
+        </div>
     `;
 
     // Creating the animal effect section for information about light pollution effect on animal.
     const ANIMAL_EFFECT_CONTENT= document.createElement(`section`);
+    ANIMAL_EFFECT_CONTENT.classList.add('content-box');
+    ANIMAL_EFFECT_CONTENT.ariaLabel = `"${ENDPOINT.effectTitle}"`;
     ANIMAL_EFFECT_CONTENT.innerHTML = `
-        <section class="content-box" aria-label="${ENDPOINT.effectTitle}">
-            <div class="animal-light-effect">
-                <h3 class="change glow">${ENDPOINT.effectTitle}</h3>
-                <p>${ENDPOINT.effectDescription}</p>
-            </div>
-            <button class="button" id="animal-back">Back to Environments</button>
-        </section>
+        <div class="animal-light-effect">
+            <h3 class="change glow">${ENDPOINT.effectTitle}</h3>
+            <p>${ENDPOINT.effectDescription}</p>
+        </div>
+        <button class="button" id="animal-back">Back to Environments</button>
     `;
 
     // Appending the created sections to the main content area with section bars in between.
