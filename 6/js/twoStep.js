@@ -85,7 +85,7 @@ function updateBackButton() {
 }
 
 // Sets the animal endpoint functionality.
-function setAnimalEndpointBackButton() {
+function setEndpointBackButton() {
     const ANIMAL_BACK_BUTTON = document.querySelector('#animal-back');
 
     ANIMAL_BACK_BUTTON.addEventListener('click', () => {
@@ -222,7 +222,7 @@ function stepTwo(animal) {
     changeHeroTitle(animal);
     renderAnimal(animal);
 
-    setAnimalEndpointBackButton();
+    setEndpointBackButton();
 }
 
 
