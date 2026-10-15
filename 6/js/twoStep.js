@@ -158,9 +158,9 @@ function renderAnimal(animal) {
     const MAIN = document.querySelector('main');
     
 
-    // Adding the animal endpoint
-    addSectionBar(MAIN);
-    MAIN.innerHTML += `
+    // Creating the animal figure section for the profile picture and caption.
+    const ANIMAL_FIGURE = document.createElement('section');
+    ANIMAL_FIGURE.innerHTML = `
         <section class="content-box" aria-label="Little brown bat photograph">
             <figure class="animal-profile-pic">
                 <img class="wide-img-window" src=${animal.image} alt="${animal.alt}">
@@ -168,8 +168,10 @@ function renderAnimal(animal) {
             </figure>
         </section>
     `;
-    addSectionBar(MAIN);
-    MAIN.innerHTML += `
+    
+    // Creating the animal content section for detailed information.
+    const  ANIMAL_CONTENT = document.createElement(`section`);
+    ANIMAL_CONTENT.innerHTML = `
         <section class="content-box" aria-label="${animal.name} information">
             <div class="animal-info">
                 <div class="animal-quick-facts">
@@ -203,8 +205,10 @@ function renderAnimal(animal) {
             </div>
         </section>
     `;
-    addSectionBar(MAIN);
-    MAIN.innerHTML += `
+
+    // Creating the animal effect section for information about light pollution effect on animal.
+    const ANIMAL_EFFECT_CONTENT= document.createElement(`section`);
+    ANIMAL_EFFECT_CONTENT.innerHTML = `
         <section class="content-box" aria-label="${ENDPOINT.effectTitle}">
             <div class="animal-light-effect">
                 <h3 class="change glow">${ENDPOINT.effectTitle}</h3>
@@ -213,6 +217,14 @@ function renderAnimal(animal) {
             <button class="button" id="animal-back">Back to Environments</button>
         </section>
     `;
+
+    // Appending the created sections to the main content area with section bars in between.
+    addSectionBar(MAIN);
+    MAIN.appendChild(ANIMAL_FIGURE);
+    addSectionBar(MAIN);
+    MAIN.appendChild(ANIMAL_CONTENT);
+    addSectionBar(MAIN);
+    MAIN.appendChild(ANIMAL_EFFECT_CONTENT);
     addSectionBar(MAIN);
 }
 
