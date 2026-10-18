@@ -1,6 +1,7 @@
 const toggle = document.querySelector(".nav-toggle");
 const links = document.querySelector("#primary-links");
 
+// Toggle navigation hamburger menu on click
 toggle.addEventListener("click", () => {
     const isOpen = toggle.getAttribute("aria-expanded") === "true";
     toggle.setAttribute("aria-expanded", String(!isOpen));
