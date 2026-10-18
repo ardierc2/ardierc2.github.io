@@ -13,14 +13,20 @@
 </head>
 <body>
     <header>
-        <nav class="top-nav">
+        <nav class="top-nav glow">
             <div class="nav-left">
-                <a class="nav-home" href="index.html">Lights Out</a>
+                <a class="nav-home" href="#">Lights Out</a>
             </div>
-            <div class="nav-center">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-links" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-center" id="primary-links">
                 <a class="nav-link" href="twoStep.html">Environments</a>
                 <a class="nav-link" href="static.html">Learn More</a>
                 <a class="nav-link" href="contactUs.html">Contact Us</a>
+                <a class="nav-link nav-login nav-login-mobile" href="#" onclick="alert('Login functionality not implemented yet.');">Login</a>
             </div>
             <div class="nav-right">
                 <a class="nav-login" href="#" onclick="alert('Login functionality not implemented yet.');">Login</a>
@@ -96,6 +102,7 @@
         </p>
     </footer>
 
+    <script src="js/nav.js"></script>
     <script src="js/twoStep.js"></script>
 </body>
 </html> 

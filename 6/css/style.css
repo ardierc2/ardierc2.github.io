@@ -63,7 +63,7 @@ figcaption a:visited {
     text-shadow: 0 2px 75px white;
 }
 
-.silent-href:hover {
+.silent-href:hover, .silent-href:focus-visible {
     text-decoration: none;
 }
 
@@ -148,7 +148,7 @@ button {
     text-decoration: none;
 }
 
-.button:hover,.button:active {
+.button:hover, .button:focus-visible, .button:active {
     background-color: rgba(63, 64, 85, 0.9);
     text-decoration: underline solid orange;
 }
@@ -334,7 +334,7 @@ figcaption {
 
 }
 
-.two-step-card:hover, .two-step-card:active {
+.two-step-card:hover, .two-step-card:focus-within, .two-step-card:active {
     border-color: orange;
 }
 
@@ -343,7 +343,7 @@ figcaption {
     border: none; 
 }
 
-.two-step-card:hover{
+.two-step-card:hover, .two-step-card:focus-within {
     transform:scale(1.035);
     box-shadow: 0 4px 8px rgba(255, 165, 0, 0.5);
     transition: transform 0.3s ease;
@@ -519,7 +519,7 @@ figcaption {
     min-width: 0;
 }
 
-.nav-home:hover, .nav-home:active {
+.nav-home:hover, .nav-home:focus-visible, .nav-home:active {
     background-color: transparent;
     border: 2px solid orange;
 }
@@ -528,7 +528,11 @@ figcaption {
     font-weight: 600;
 }
 
-.nav-login:hover,.nav-login:active {
+.nav-login-mobile {
+    display: none;
+}
+
+.nav-login:hover, .nav-login:focus-visible, .nav-login:active {
     color: orange;
 }
 
@@ -553,8 +557,12 @@ figcaption {
     text-decoration: none;
 }
 
-.nav-link:hover,.nav-link:active {
+.nav-link:hover, .nav-link:focus-visible, .nav-link:active {
     color: orange;
+}
+
+.nav-toggle {
+    display: none;
 }
 
 /* 
@@ -1028,11 +1036,76 @@ footer {
         grid-template-rows: 1fr;
     }
 
-    .two-step-card:hover{
+    .two-step-card:hover, .two-step-card:focus-within {
         transform:scale(1.075);
     }
 
     .two-step-card:active{
         transform:scale(1);
+    }
+}
+
+
+/* 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    Small Screens and Down (Hamburger Menu)    
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+*/
+@media (max-width: 874px) {
+    .nav-toggle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        margin: 6px;
+        padding: 10px;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .nav-toggle span {
+        width: 24px;
+        height: 2px;
+        background: white;
+    }
+
+    .nav-toggle:hover span,
+    .nav-toggle:focus-visible span {
+        background: orange;
+    }
+
+    .nav-center {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        flex-direction: column;
+        margin: 0;
+        padding: 8px;
+        background-color: rgba(63, 64, 85, 0.9);
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+
+    }
+
+    .nav-center.is-open {
+        display: flex;
+    }
+
+    .nav-center .nav-login-mobile {
+        display: block;
+    }
+
+    .nav-right .nav-login {
+        display: none;
+    }
+
+    .nav-link {
+        min-width: 0;
+        margin: 0;
     }
 }
