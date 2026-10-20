@@ -22,7 +22,7 @@ jobs:
             --jq '.[] | .filename, (.previous_filename // empty)')
 
           # Edit this regex to list your protected paths
-          protected='^[1-5]/'
+          protected='^[1-6]/'
 
           hits=$(echo "$files" | grep -E "$protected" || true)
           if [ -n "$hits" ]; then
