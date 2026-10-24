@@ -636,6 +636,13 @@ figcaption {
   color: orange;
 }
 
+.nav-link[aria-current='page'] {
+  text-decoration: underline;
+  text-decoration-color: orange;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.3em;
+}
+
 .nav-toggle {
   display: none;
 }

@@ -17,6 +17,8 @@ const ENVIRONMENTS_PROMISE = fetch('js/environments.json')
 // Variables for keeping track of the two-step process
 let isEnvironment = true;
 let environmentIndex = -1;
+let selectedEnvironment;
+let animalSelectionDOM;
 
 // >>>>>>>>>>>>>
 //    Helpers
@@ -26,12 +28,6 @@ let environmentIndex = -1;
 function changeTitle(item) {
   const TITLE_ELEMENT = document.querySelector('title');
   TITLE_ELEMENT.textContent = item.title;
-}
-
-// Clears the main content area of the page.
-function clearMain() {
-  const MAIN = document.querySelector('main');
-  MAIN.innerHTML = '';
 }
 
 // Swaps the hero image to the resepective environment
@@ -78,7 +74,12 @@ function setEndpointBackButton() {
   const ANIMAL_BACK_BUTTON = document.querySelector('#animal-back');
 
   ANIMAL_BACK_BUTTON.addEventListener('click', () => {
-    window.location.href = 'twoStep.html';
+    if (!animalSelectionDOM) return;
+
+    document.querySelector('main').replaceChildren(animalSelectionDOM);
+    changeTitle(selectedEnvironment);
+    changeHeroTitle(selectedEnvironment);
+    updateBackButton();
   });
 }
 
@@ -120,6 +121,7 @@ function setAnimals(environment) {
 
 // Transition from environment selection to animal selection.
 function stepOne(environment) {
+  selectedEnvironment = environment;
   changeTitle(environment);
   changeHeroImage(environment);
   changeHeroTitle(environment);
@@ -137,8 +139,13 @@ function stepOne(environment) {
 function renderAnimal(animal) {
   const ENDPOINT = animal.endpoint;
 
-  clearMain();
+  // Clearing the main content area before rendering the animal endpoint details.
+  // Storing the result of the first step in a document fragment to preserve it for later use.
   const MAIN = document.querySelector('main');
+  animalSelectionDOM = document.createDocumentFragment();
+  while (MAIN.firstChild) {
+    animalSelectionDOM.appendChild(MAIN.firstChild);
+  }
 
   // Creating the animal figure section for the profile picture and caption.
   const ANIMAL_FIGURE = document.createElement('section');
@@ -197,7 +204,7 @@ function renderAnimal(animal) {
             <h3 class="change glow">${ENDPOINT.effectTitle}</h3>
             <p>${ENDPOINT.effectDescription}</p>
         </div>
-        <button class="button" id="animal-back">Back to Environments</button>
+        <button class="button" id="animal-back">Back to ${selectedEnvironment.name}</button>
     `;
 
   // Appending the created sections to the main content area with section bars in between.
