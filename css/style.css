@@ -1,62 +1,62 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Helps with forcing footer to the bottom */
-html, body{
-    background-color:#E8EDE0;
-    min-height: 100vh;
-    font-family:'Courier New', Courier, monospace;
+html,
+body {
+  background-color: #e8ede0;
+  min-height: 100vh;
+  font-family: 'Courier New', Courier, monospace;
 
-    margin:0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 body {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header and top level heading styling and color of my choice */
 header {
-    text-align:  center;
+  text-align: center;
 }
 
 body header h1 {
-    display: inline-block;
-    font-weight: 900;
-    color: #183c33;
+  display: inline-block;
+  font-weight: 900;
+  color: #183c33;
 
-    padding: 5px 1em 0px 1em;
+  padding: 5px 1em 0px 1em;
 }
 
 hr {
-    color: #527153;
-    margin: 0 20%;
-    height: 3px;
-    background-color: #527153; 
-    border-radius: 1em;
-    border-style: hidden;
+  color: #527153;
+  margin: 0 20%;
+  height: 3px;
+  background-color: #527153;
+  border-radius: 1em;
+  border-style: hidden;
 }
 
 #header-name {
-    display: inline-block;
-    font-family: 'Indie Flower';
-    font-weight: 300;
+  display: inline-block;
+  font-family: 'Indie Flower';
+  font-weight: 300;
 }
 
-
 /* Cards centered on page and styled*/
-.project-cards{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: auto 10vw auto 10vw;
+.project-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto 10vw auto 10vw;
 
-    align-self:center;
+  align-self: center;
 
-    max-width: 900px;
-    width: 100%;
+  max-width: 900px;
+  width: 100%;
 }
 
 /* Old card style */
@@ -80,82 +80,78 @@ hr {
 
 } */
 
-
 .card {
-    width: 100%;
-    margin: 5px 2em;
-    padding: 1em;
+  width: 100%;
+  margin: 5px 2em;
+  padding: 1em;
 
-    background-color: #f1f3ea;
-    color: #183c33;
+  background-color: #f1f3ea;
+  color: #183c33;
 
-    border-color: #527153;
-    border-radius: .75em;
-    border-style: solid;
-    border-width: 3px;
+  border-color: #527153;
+  border-radius: 0.75em;
+  border-style: solid;
+  border-width: 3px;
 
-    text-decoration: none;
+  text-decoration: none;
 
-    transition: all .35s ease;
+  transition: all 0.35s ease;
 }
 
 .card span {
-    font-size: large;
-    font-weight: 900;
-
+  font-size: large;
+  font-weight: 900;
 }
 
 .wip {
-    background-color: #fcf7e2;
-    border-color: #ecc66e;
+  background-color: #fcf7e2;
+  border-color: #ecc66e;
 
-    color:#c88d02
+  color: #c88d02;
 }
 
 img {
-    display: block;
-    margin: 0 auto;
-    max-width: 150px;
+  display: block;
+  margin: 0 auto;
+  max-width: 150px;
 
-    transform: translateY(10px);
+  transform: translateY(10px);
 }
 
 footer a {
-    color: #7c7e4e;
+  color: #7c7e4e;
 }
-
 
 /* Footer forced to bottom of page */
 footer {
-    text-align:center;
-    margin-top:auto;
-    padding-right: 24px;
-    color: #183c33;
+  text-align: center;
+  margin-top: auto;
+  padding-right: 24px;
+  color: #183c33;
 }
-
-
 
 /* Card hover and active states, messing around trying to learn more of the CSS transitions */
 .card:hover {
-    background-color: #d7e1c8;
-    transform: scale(1.075);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+  background-color: #d7e1c8;
+  transform: scale(1.075);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
 
-
-    transition: background-color 0.2s ease, 
-                color 0.2s ease, 
-                transform 0.2s ease, 
-                box-shadow 0.2s ease; 
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .card:active {
-    transform: scale(1.05) translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
-    transition: transform 0.1s ease, 
-                box-shadow 0.1s ease; 
+  transition:
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
 }
 
 .card.wip:hover {
-    background-color: rgb(252, 240, 193);
+  background-color: rgb(252, 240, 193);
 }
