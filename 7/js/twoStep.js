@@ -74,8 +74,6 @@ function setEndpointBackButton() {
   const ANIMAL_BACK_BUTTON = document.querySelector('#animal-back');
 
   ANIMAL_BACK_BUTTON.addEventListener('click', () => {
-    if (!animalSelectionDOM) return;
-
     document.querySelector('main').replaceChildren(animalSelectionDOM);
     changeTitle(selectedEnvironment);
     changeHeroTitle(selectedEnvironment);
