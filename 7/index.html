@@ -39,22 +39,16 @@
           <a class="nav-link auth auth-hidden" href="twoStep.html">Environments</a>
           <a class="nav-link auth auth-hidden" href="static.html">Learn More</a>
           <a class="nav-link auth auth-hidden" href="contactUs.html">Contact Us</a>
-          <button
-            type="button"
-            class="login-button nav-link nav-login nav-login-mobile auth-hidden"
-          >
-            Login
-          </button>
-          <button
+          <button type="button" class="nav-link nav-login nav-login-mobile auth-hidden"></button>
+          <!-- <button
             type="button"
             class="logout-button nav-link nav-login nav-login-mobile auth-hidden"
           >
             Logout
-          </button>
+          </button> -->
         </div>
         <div class="nav-right">
-          <button type="button" class="login-button nav-login auth-hidden">Login</button>
-          <button type="button" class="logout-button nav-login auth-hidden">Logout</button>
+          <button type="button" class="nav-login auth-hidden"></button>
         </div>
       </nav>
       <div class="hero">
@@ -227,6 +221,14 @@
         <a href="mailto:ardierc2@go.olemiss.edu">ardierc2@go.olemiss.edu</a>
       </p>
     </footer>
+
+    <dialog class="sign-in-dialog" id="sign-in-dialog" aria-label="sign-in-to-continue">
+      <p id="sign-in-message">Sign in to continue.</p>
+      <div class="sign-in-actions">
+        <button class="sign-in-cancel" id="cancel-sign-in" type="button">Cancel</button>
+        <button class="button" id="continue-with-google" type="button">Login with Google</button>
+      </div>
+    </dialog>
 
     <script src="js/nav.js"></script>
     <script type="module" src="js/database/auth.js"></script>

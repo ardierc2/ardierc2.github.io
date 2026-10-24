@@ -113,6 +113,50 @@ button {
 
 /* 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        Sign In Dialog 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+*/
+
+.sign-in-dialog {
+  width: min(28rem, calc(100% - 2rem));
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 1rem;
+  background-color: #1f262b;
+  color: white;
+  text-align: center;
+}
+
+.sign-in-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.72);
+}
+
+.sign-in-status {
+  min-height: 1.5em;
+  font-size: 1rem;
+}
+
+.sign-in-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sign-in-cancel {
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 1em;
+}
+
+.sign-in-cancel:hover,
+.sign-in-cancel:focus-visible {
+  color: orange;
+}
+
+/* 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
             Layout 
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
 */
@@ -551,6 +595,7 @@ figcaption {
 
 .nav-login {
   appearance: none;
+  background-color: transparent;
   font-weight: 600;
 }
 
