@@ -1,6 +1,44 @@
 import { signOutUser, signInWithGoogle } from '../firebase-config.js';
 import { auth } from '../firebase-config.js';
 
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//        Error dialog
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<
+function showErrorDialog(error) {
+  const errorDialog = document.getElementById('error-dialog');
+  if (errorDialog) {
+    errorDialog.getElementsByTagName('p')[0].textContent =
+      error || 'Error: an unexpected error occurred';
+    errorDialog.showModal();
+  } else {
+    console.error('Error dialog not found');
+  }
+}
+
+const errorDialog = document.getElementById('error-dialog');
+if (errorDialog) {
+  // close error dialog
+  const closeButton = errorDialog.querySelector('#close-error-message');
+  if (closeButton) {
+    closeButton.addEventListener('click', () => errorDialog.close());
+  }
+
+  //close error dialogue when clicking outside of the dialog box
+  errorDialog.addEventListener('click', (event) => {
+    if (event.target !== errorDialog) return;
+
+    const bounds = errorDialog.getBoundingClientRect();
+    if (
+      event.clientX < bounds.left ||
+      event.clientX > bounds.right ||
+      event.clientY < bounds.top ||
+      event.clientY > bounds.bottom
+    ) {
+      errorDialog.close();
+    }
+  });
+}
+
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //     Authentication Handling
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -33,15 +71,23 @@ function renderNav(user) {
 // Helper Function for event listeners to handle login with Google authentication
 async function login() {
   console.log('Signing in with Google...');
-  await signInWithGoogle();
-  console.log('Sign-in process completed.');
+  try {
+    await signInWithGoogle();
+  } catch (error) {
+    showErrorDialog('Error signing in with Google.');
+    console.error('Error signing in with Google:', error);
+  }
 }
 
 // Helper Function for event listeners to handle logout
 async function logout() {
   console.log('Signing out...');
-  await signOutUser('index.html');
-  console.log('Sign-out process completed.');
+  try {
+    await signOutUser('index.html');
+  } catch (error) {
+    showErrorDialog('Error signing out.');
+    console.error('Error signing out:', error);
+  }
 }
 
 // Function to add event listeners to login and logout buttons
