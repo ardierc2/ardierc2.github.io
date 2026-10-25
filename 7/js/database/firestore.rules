@@ -1,0 +1,52 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ---------------------------------------
+    // ----------- Helper Functions ----------
+    // ---------------------------------------
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isValidContact() {
+      let data = request.resource.data;
+      return data.keys().hasOnly(['name', 'email', 'message'])
+        && data.keys().hasAll(['name', 'email', 'message'])
+        && data.name is string    
+        && data.name.size() > 0    
+        && data.name.size() <= 100
+        && data.email is string   
+        && data.email.size() > 0   
+        && data.email.size() <= 254
+        && data.email.matches('^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$')
+        && data.message is string 
+        && data.message.size() > 0 
+        && data.message.size() <= 5000;
+    }
+
+    // ---------------------------------------
+    // ------------- Collections -------------
+    // ---------------------------------------
+    match /environments/{environment} {
+      allow read: if isSignedIn();
+      allow write: if false;
+    }
+
+    match /contacts/{contacts} {
+      allow read, update, delete: if false;
+      allow create: if isSignedIn() 
+        && isValidContact();
+    }
+
+    // --------------------------------------
+    // ----------- Default Rules ------------
+    // --------------------------------------
+    // Rules are deny-by-default; 
+    // Catch-all rule to deny all other access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
