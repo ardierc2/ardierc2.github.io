@@ -117,8 +117,8 @@ function envToAnimals(animal, cardNum) {
   STRONG.classList.add('two-step-title');
 
   // Replacing the old image and strong(title) elements with the new spinner(image) and strong(title) elements.
-  PARENT.replaceChild(SPINNER, IMG_CHILD);
-  PARENT.replaceChild(STRONG, STRONG_CHILD);
+  PARENT.replaceChild(STRONG, IMG_CHILD);
+  PARENT.replaceChild(SPINNER, STRONG_CHILD);
   IMAGE.src = animal.image;
 }
 
