@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en" class="auth-data">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Andreas Diercks" />
+    <title>Lights Out - Contact Us</title>
+
+    <link rel="icon" href="img/favicon.gif" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="auth-loading" role="status" aria-live="polite">Authenticating...</div>
+    <header>
+      <nav class="top-nav glow">
+        <div class="nav-left">
+          <a class="nav-home" href="index.html">Lights Out</a>
+        </div>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-links"
+          aria-label="Open navigation menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-center" id="primary-links">
+          <a class="nav-link auth auth-hidden" href="twoStep.html">Environments</a>
+          <a class="nav-link auth auth-hidden" href="static.html">Learn More</a>
+          <a class="nav-link auth auth-hidden" href="#">Contact Us</a>
+          <button type="button" class="nav-link nav-login nav-login-mobile auth-hidden"></button>
+          <!-- <button
+            type="button"
+            class="logout-button nav-link nav-login nav-login-mobile auth-hidden"
+          >
+            Logout
+          </button> -->
+        </div>
+        <div class="nav-right">
+          <button type="button" class="nav-login auth-hidden"></button>
+        </div>
+      </nav>
+      <div class="hero">
+        <img
+          class="hero-image"
+          src="img/nightSkyline3.0.webp"
+          alt="Mountainous skyline, fading into the stars at sunset."
+        />
+        <!-- Hero Image was generated with AI -->
+        <h1 class="hero-title">Contact Us</h1>
+      </div>
+    </header>
+
+    <main>
+      <hr class="section-bar" />
+      <section class="content-box" aria-label="Contact Us Form">
+        <div class="form-container">
+          <img
+            class="form-img"
+            src="img/Firefly2.jpg"
+            alt="A  wandering firefly on a leaf looking over the edge."
+          />
+          <!-- Image sourced from Pexels.com -->
+
+          <form id="contact-form" class="contact-form" action="" method="">
+            <div class="contact-form-name">
+              <label for="name">Name:</label><br />
+              <input
+                class="form-input"
+                type="text"
+                name="name"
+                id="name"
+                aria-label="Name"
+                title="Enter your name"
+                minlength="1"
+                maxlength="100"
+                required
+              />
+            </div>
+
+            <div class="contact-form-email">
+              <label for="email">Email:</label><br />
+              <input
+                class="form-input"
+                type="email"
+                name="email"
+                id="email"
+                aria-label="Email"
+                title="Enter your email"
+                maxlength="254"
+                minlength="1"
+                required
+              />
+            </div>
+
+            <div class="contact-form-text">
+              <label for="text">Suggestions and Feedback:</label><br />
+              <textarea
+                class="form-input"
+                name="text"
+                aria-label="Suggestions and Feedback"
+                id="text"
+                rows="6"
+                minlength="0"
+                maxlength="5000"
+                required
+              ></textarea>
+            </div>
+
+            <div class="contact-form-submit">
+              <input class="button submit-button" type="submit" value="Submit" id="submit" />
+            </div>
+          </form>
+        </div>
+      </section>
+      <hr class="section-bar" />
+    </main>
+
+    <footer>
+      <p>
+        &copy;2026 Andreas Diercks -
+        <a href="mailto:ardierc2@go.olemiss.edu">ardierc2@go.olemiss.edu</a>
+      </p>
+    </footer>
+
+    <dialog class="sign-in-dialog" id="message-sent-dialog" aria-label="message-sent">
+      <p id="sign-in-message">Your message has been sent.</p>
+      <div class="sign-in-actions">
+        <button class="button" id="close-message-sent" type="button">Close</button>
+      </div>
+    </dialog>
+
+    <script src="js/nav.js"></script>
+    <script type="module" src="js/require-signed-in.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/write.js"></script>
+  </body>
+</html>
