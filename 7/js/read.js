@@ -2,7 +2,7 @@ import {
   getDocs,
   collection,
 } from 'https://www.gstatic.com/firebasejs/13.0.0/firebase-firestore.js';
-import { db, auth } from '../firebase-config.js';
+import { db } from '../firebase-config.js';
 
 // Fetching the environment data from the Firestore database.
 async function fetchEnvironment() {
@@ -10,7 +10,7 @@ async function fetchEnvironment() {
     const environment = await getDocs(collection(db, 'environments'));
     return environment.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
   } catch (error) {
-    console.error('Error fetching environment:', error);
+    showErrorDialog('Error fetching environment.');
   }
 }
 
