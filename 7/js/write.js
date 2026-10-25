@@ -2,7 +2,7 @@ import {
   addDoc,
   collection,
 } from 'https://www.gstatic.com/firebasejs/13.0.0/firebase-firestore.js';
-import { db, auth } from '../../firebase-config.js';
+import { db, auth } from '../firebase-config.js';
 
 const form = document.getElementById('contact-form');
 const nameField = document.getElementById('name');

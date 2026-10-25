@@ -1,4 +1,4 @@
-import { requireSignedInUser } from '../../firebase-config.js';
+import { requireSignedInUser } from '../firebase-config.js';
 
 const user = await requireSignedInUser('index.html');
 

@@ -29,7 +29,7 @@ service cloud.firestore {
     // ---------------------------------------
     // ------------- Collections -------------
     // ---------------------------------------
-    match /environments/{environment} {
+    match /environments/{environments} {
       allow read: if isSignedIn();
       allow write: if false;
     }
