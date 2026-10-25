@@ -45,8 +45,9 @@ export async function requireSignedInUser(redirect) {
   const user = await getCurrentUser();
   if (!user) {
     location.replace(redirect);
+  } else {
+    document.querySelector('.auth-data').classList.remove('auth-data');
   }
-  return user;
 }
 
 // * Function to get the current signed-in user
