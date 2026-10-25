@@ -92,25 +92,34 @@ function setEndpointBackButton() {
 
 // Swapping image and title elements for the environment to animal card step.
 function envToAnimals(animal, cardNum) {
-  //creating new image element
+  // Getting references to the image and strong elements within the card, as well as the parent element and image bounds.
+  const IMG_CHILD = document.querySelector(`#card${cardNum} img`);
+  const STRONG_CHILD = document.querySelector(`#card${cardNum} strong`);
+  const PARENT = IMG_CHILD.parentNode;
+  const IMAGE_BOUNDS = IMG_CHILD.getBoundingClientRect();
+
+  // Creating a spinner element to show while the image is loading.
+  const SPINNER = document.createElement('span');
+  SPINNER.classList.add('two-step-loading-spinner');
+  SPINNER.setAttribute('aria-hidden', 'true');
+  SPINNER.style.width = `${IMAGE_BOUNDS.width}px`;
+  SPINNER.style.height = `${IMAGE_BOUNDS.height}px`;
+
+  // Creating a new image element for the animal and setting up its load and error event listeners.
   const IMAGE = document.createElement('img');
-  IMAGE.src = animal.image;
   IMAGE.alt = animal.alt;
   IMAGE.classList.add('wide-img-window');
+  IMAGE.addEventListener('load', () => SPINNER.replaceWith(IMAGE));
 
   //creating new card title element
   const STRONG = document.createElement('strong');
   STRONG.textContent = animal.name;
   STRONG.classList.add('two-step-title');
 
-  //getting child and parent elements for swap.
-  const IMG_CHILD = document.querySelector(`#card${cardNum} img`);
-  const STRONG_CHILD = document.querySelector(`#card${cardNum} strong`);
-  const PARENT = IMG_CHILD.parentNode;
-
-  //swapping image and title elements with new information and order.
-  PARENT.replaceChild(IMAGE, STRONG_CHILD);
-  PARENT.replaceChild(STRONG, IMG_CHILD);
+  // Replacing the old image and strong(title) elements with the new spinner(image) and strong(title) elements.
+  PARENT.replaceChild(SPINNER, IMG_CHILD);
+  PARENT.replaceChild(STRONG, STRONG_CHILD);
+  IMAGE.src = animal.image;
 }
 
 // Sets the animal cards for the selected environment.
