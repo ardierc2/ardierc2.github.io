@@ -169,7 +169,6 @@ button {
 .sign-in-dialog #sign-in-message {
   margin: 0 0 1.25rem;
   font-size: 1.5rem;
-  font-weight: bold;
 }
 
 .sign-in-dialog::backdrop {

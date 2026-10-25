@@ -11,7 +11,7 @@ const messageField = document.getElementById('text');
 const messageSentDialog = document.getElementById('message-sent-dialog');
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-// Show message sent dialog
+//    Show message sent dialog
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 function showMessageSentDialog() {
@@ -25,21 +25,30 @@ function showMessageSentDialog() {
 }
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>
-// Show error dialog
+//      Show error dialog
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<
-function showErrorDialog() {
+function showErrorDialog(error) {
   if (messageSentDialog) {
     messageSentDialog.getElementsByTagName('p')[0].textContent =
-      'An error occurred while sending your message';
+      error || 'Error: Please check your input and try again.';
     messageSentDialog.showModal();
   } else {
     console.error('Message sent dialog not found');
   }
 }
 
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//    Handle form submission
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+// Add event listener for form submission
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
   await auth.authStateReady();
+  if (!auth.currentUser) {
+    showErrorDialog('Error: User not signed in.');
+    return;
+  }
 
   try {
     await addDoc(collection(db, 'contacts'), {
@@ -51,10 +60,13 @@ form.addEventListener('submit', async (event) => {
     form.reset();
     showMessageSentDialog();
   } catch (error) {
-    console.error('Error adding document: ', error);
     showErrorDialog();
   }
 });
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//  Handle closing the message sent dialog
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 // close modal when clicking the close button
 const closeMessageSentButton = document.getElementById('close-message-sent');
