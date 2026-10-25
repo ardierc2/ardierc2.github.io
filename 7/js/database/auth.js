@@ -1,5 +1,5 @@
-import { signOutUser, signInWithGoogle } from './firebase-config.js';
-import { auth } from './firebase-config.js';
+import { signOutUser, signInWithGoogle } from '../../firebase-config.js';
+import { auth } from '../../firebase-config.js';
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //     Authentication Handling

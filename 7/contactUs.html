@@ -65,24 +65,53 @@
           />
           <!-- Image sourced from Pexels.com -->
 
-          <form class="contact-form" action="" method="">
+          <form id="contact-form" class="contact-form" action="" method="">
             <div class="contact-form-name">
               <label for="name">Name:</label><br />
-              <input class="form-input" type="text" name="name" id="name" required />
+              <input
+                class="form-input"
+                type="text"
+                name="name"
+                id="name"
+                aria-label="Name"
+                title="Enter your name"
+                minlength="1"
+                maxlength="100"
+                required
+              />
             </div>
 
             <div class="contact-form-email">
               <label for="email">Email:</label><br />
-              <input class="form-input" type="email" name="email" id="email" required />
+              <input
+                class="form-input"
+                type="email"
+                name="email"
+                id="email"
+                aria-label="Email"
+                title="Enter your email"
+                maxlength="254"
+                minlength="1"
+                required
+              />
             </div>
 
             <div class="contact-form-text">
               <label for="text">Suggestions and Feedback:</label><br />
-              <textarea class="form-input" name="text" id="text" rows="6" required></textarea>
+              <textarea
+                class="form-input"
+                name="text"
+                aria-label="Suggestions and Feedback"
+                id="text"
+                rows="6"
+                minlength="0"
+                maxlength="5000"
+                required
+              ></textarea>
             </div>
 
             <div class="contact-form-submit">
-              <input class="button submit-button" type="submit" value="Submit!" />
+              <input class="button submit-button" type="submit" value="Submit" id="submit" />
             </div>
           </form>
         </div>
@@ -97,8 +126,16 @@
       </p>
     </footer>
 
+    <dialog class="sign-in-dialog" id="message-sent-dialog" aria-label="message-sent">
+      <p id="sign-in-message">Your message has been sent.</p>
+      <div class="sign-in-actions">
+        <button class="button" id="close-message-sent" type="button">Close</button>
+      </div>
+    </dialog>
+
     <script src="js/nav.js"></script>
     <script type="module" src="js/database/require-signed-in.js"></script>
     <script type="module" src="js/database/auth.js"></script>
+    <script type="module" src="js/database/write.js"></script>
   </body>
 </html>

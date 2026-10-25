@@ -15,15 +15,15 @@ service cloud.firestore {
       return data.keys().hasOnly(['name', 'email', 'message'])
         && data.keys().hasAll(['name', 'email', 'message'])
         && data.name is string    
-        && data.name.size() > 0    
-        && data.name.size() <= 100
+        && data.name.trim().size() > 0    
+        && data.name.trim().size() <= 100
         && data.email is string   
-        && data.email.size() > 0   
-        && data.email.size() <= 254
+        && data.email.trim().size() > 0   
+        && data.email.trim().size() <= 254
         && data.email.matches('^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$')
         && data.message is string 
-        && data.message.size() > 0 
-        && data.message.size() <= 5000;
+        && data.message.trim().size() > 0 
+        && data.message.trim().size() <= 5000;
     }
 
     // ---------------------------------------
