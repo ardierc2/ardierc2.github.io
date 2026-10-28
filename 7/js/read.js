@@ -205,6 +205,8 @@ function renderAnimal(animal) {
                 </figcaption>
             </figure>
         </div>
+        <br>
+        <button class="button" id="animal-back">Back to ${selectedEnvironment.name}</button>
     `;
 
   // Creating the animal effect section for information about light pollution effect on animal.
@@ -216,16 +218,14 @@ function renderAnimal(animal) {
             <h3 class="change glow">${ENDPOINT.effectTitle}</h3>
             <p>${ENDPOINT.effectDescription}</p>
         </div>
-        <button class="button" id="animal-back">Back to ${selectedEnvironment.name}</button>
     `;
 
   // Appending the created sections to the main content area with section bars in between.
   addSectionBar(MAIN);
   MAIN.appendChild(ANIMAL_FIGURE);
+  MAIN.appendChild(ANIMAL_EFFECT_CONTENT);
   addSectionBar(MAIN);
   MAIN.appendChild(ANIMAL_CONTENT);
-  addSectionBar(MAIN);
-  MAIN.appendChild(ANIMAL_EFFECT_CONTENT);
   addSectionBar(MAIN);
 }
 
