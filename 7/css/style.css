@@ -906,6 +906,7 @@ figcaption {
 }
 
 .animal-quick-facts ul li {
+  font-size: 1.25rem;
   margin: 5px 0;
 }
 
@@ -1187,18 +1188,6 @@ footer {
   .dsm-card:nth-child(even) .dsm-card-info {
     grid-column: 1;
     grid-row: 1;
-  }
-
-  .animal-quick-facts h3 {
-    font-size: 2rem;
-  }
-
-  .animal-quick-facts ul li {
-    font-size: 1.25rem;
-  }
-
-  .animal-quick-facts ul strong {
-    font-size: 1.25rem;
   }
 }
 
