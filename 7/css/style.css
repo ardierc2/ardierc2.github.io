@@ -467,7 +467,6 @@ figcaption {
 }
 
 .two-step-card:hover,
-.two-step-card:focus-within,
 .two-step-card:active {
   border-color: orange;
 }
@@ -477,8 +476,7 @@ figcaption {
   border: none;
 }
 
-.two-step-card:hover,
-.two-step-card:focus-within {
+.two-step-card:hover {
   transform: scale(1.035);
   box-shadow: 0 4px 8px rgba(255, 165, 0, 0.5);
   transition: transform 0.3s ease;
@@ -1208,13 +1206,8 @@ footer {
     grid-template-rows: 1fr;
   }
 
-  .two-step-card:hover,
-  .two-step-card:focus-within {
+  .two-step-card:hover {
     transform: scale(1.075);
-  }
-
-  .two-step-card:active {
-    transform: scale(1);
   }
 }
 
