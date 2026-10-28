@@ -176,16 +176,18 @@ function renderAnimal(animal) {
   ANIMAL_CONTENT.ariaLabel = `"${animal.name} information"`;
   ANIMAL_CONTENT.innerHTML = `
         <div class="animal-info">
-            <div class="animal-quick-facts">
-                <h3>Quick Facts</h3>
-                <div class="sub-section-bar" aria-hidden="true"></div>
-                <ul>
-                    <li><strong>Size:</strong> ${ENDPOINT.quickFacts.size}</li>
-                    <li><strong>Weight:</strong> ${ENDPOINT.quickFacts.weight}</li>
-                    <li><strong>Lifespan:</strong> ${ENDPOINT.quickFacts.lifespan}</li>
-                    <li><strong>Conservation Status:</strong> ${ENDPOINT.quickFacts.conservationStatus}</li>
-                    <li><strong>Range:</strong> ${ENDPOINT.quickFacts.range}</li>
-                </ul>
+          <div>
+              <div class="animal-quick-facts">
+                  <h3>Quick Facts</h3>
+                  <div class="sub-section-bar" aria-hidden="true"></div>
+                  <ul>
+                      <li><strong>Size:</strong> ${ENDPOINT.quickFacts.size}</li>
+                      <li><strong>Weight:</strong> ${ENDPOINT.quickFacts.weight}</li>
+                      <li><strong>Lifespan:</strong> ${ENDPOINT.quickFacts.lifespan}</li>
+                      <li><strong>Conservation Status:</strong> ${ENDPOINT.quickFacts.conservationStatus}</li>
+                      <li><strong>Range:</strong> ${ENDPOINT.quickFacts.range}</li>
+                  </ul>
+              </div>
             </div>
             <div class="animal-description">
                 <h3>Key Nighttime Adaptations</h3>
