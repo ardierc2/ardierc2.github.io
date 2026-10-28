@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 85%;
+}
+
 /* 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>
             Auth 
@@ -213,7 +217,7 @@ button {
   text-align: center;
   margin: 0 auto;
   padding: 1em;
-  max-width: 1500px;
+  max-width: 1200px;
 }
 
 .section-bar {
@@ -361,6 +365,7 @@ figcaption {
 
 .light-list {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 1em;
@@ -647,6 +652,9 @@ figcaption {
 .nav-home {
   background-color: rgba(255, 165, 0, 0.75);
   min-width: 0;
+  white-space: nowrap;
+  align-self: flex-start;
+  text-align: center;
 }
 
 .nav-home:hover,
@@ -921,8 +929,8 @@ figcaption {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 70vh;
-  max-height: 800px;
+  height: 50vh;
+  max-height: 600px;
 }
 
 .hero-image {
@@ -977,7 +985,7 @@ footer {
   }
 
   .nav-home {
-    min-width: 168px;
+    min-width: 0;
   }
 
   .top-nav {
@@ -1054,7 +1062,7 @@ footer {
     object-position: center;
 
     width: 100%;
-    height: 500px;
+    height: 400px;
   }
 
   .dsm {
@@ -1136,10 +1144,30 @@ footer {
     font-size: 5rem;
   }
 
+  .light-list {
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
+
   .light-card {
-    margin: 10px 20px;
-    width: 30%;
+    flex: 1 1 0;
+    min-width: 0;
+    margin: 1em 0;
+    width: auto;
     border-radius: 1em;
+  }
+
+  .light-card div {
+    padding: 14px;
+  }
+
+  .light-card h3 {
+    font-size: 1.5rem;
+    overflow-wrap: anywhere;
+  }
+
+  .light-card p {
+    font-size: 1.25rem;
   }
 
   .dsm-card {
