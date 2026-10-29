@@ -1187,6 +1187,12 @@ footer {
     grid-column: 1;
     grid-row: 1;
   }
+
+  .two-step-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
 }
 
 /* 
@@ -1198,12 +1204,6 @@ footer {
 @media (min-width: 1500px) {
   .section-bar {
     width: 1500px;
-  }
-
-  .two-step-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
   }
 
   .two-step-card:hover {
