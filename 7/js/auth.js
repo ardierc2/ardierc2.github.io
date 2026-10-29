@@ -1,4 +1,4 @@
-import { signOutUser, signInWithGoogle } from '../firebase-config.js';
+import { signOutUser, signInWithGoogle } from 'helpers.js';
 import { auth } from '../firebase-config.js';
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>

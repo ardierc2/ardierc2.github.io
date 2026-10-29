@@ -1,3 +1,6 @@
-import { requireSignedInUser } from '../firebase-config.js';
-
-requireSignedInUser('index.html');
+const user = await getCurrentUser();
+if (!user) {
+  location.replace('index.html');
+} else {
+  document.querySelector('.auth-data').classList.remove('auth-data');
+}
