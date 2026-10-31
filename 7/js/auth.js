@@ -10,33 +10,66 @@ function showErrorDialog(error) {
     errorDialog.getElementsByTagName('p')[0].textContent =
       error || 'Error: an unexpected error occurred';
     errorDialog.showModal();
+
+    // close error dialog
+    const closeButton = errorDialog.querySelector('#close-error-message');
+    if (closeButton) {
+      closeButton.addEventListener('click', () => errorDialog.close());
+    }
+
+    //close error dialogue when clicking outside of the dialog box
+    errorDialog.addEventListener('click', (event) => {
+      if (event.target !== errorDialog) return;
+
+      const bounds = errorDialog.getBoundingClientRect();
+      if (
+        event.clientX < bounds.left ||
+        event.clientX > bounds.right ||
+        event.clientY < bounds.top ||
+        event.clientY > bounds.bottom
+      ) {
+        errorDialog.close();
+      }
+    });
   } else {
     console.error('Error dialog not found');
   }
 }
 
-const errorDialog = document.getElementById('error-dialog');
-if (errorDialog) {
-  // close error dialog
-  const closeButton = errorDialog.querySelector('#close-error-message');
-  if (closeButton) {
-    closeButton.addEventListener('click', () => errorDialog.close());
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//        password dialog
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<
+function showPasswordDialogue(text, url) {
+  const passwordDialogue = document.getElementById('password-dialog');
+  if (passwordDialogue) {
+    passwordDialogue.getElementsByTagName('p')[0].textContent = text;
+    passwordDialogue.showModal();
+
+    // continue to google button
+    const continueButton = passwordDialogue.querySelector('#continue-to-google');
+    continueButton.addEventListener('click', () => window.open(url, '_blank'));
+
+    // close password dialog
+    const closeButton = passwordDialogue.querySelector('#close-password-message');
+    closeButton.addEventListener('click', () => passwordDialogue.close());
+
+    //close password dialogue when clicking outside of the dialog box
+    passwordDialogue.addEventListener('click', (event) => {
+      if (event.target !== passwordDialogue) return;
+
+      const bounds = passwordDialogue.getBoundingClientRect();
+      if (
+        event.clientX < bounds.left ||
+        event.clientX > bounds.right ||
+        event.clientY < bounds.top ||
+        event.clientY > bounds.bottom
+      ) {
+        passwordDialogue.close();
+      }
+    });
+  } else {
+    console.error('Password dialog not found');
   }
-
-  //close error dialogue when clicking outside of the dialog box
-  errorDialog.addEventListener('click', (event) => {
-    if (event.target !== errorDialog) return;
-
-    const bounds = errorDialog.getBoundingClientRect();
-    if (
-      event.clientX < bounds.left ||
-      event.clientX > bounds.right ||
-      event.clientY < bounds.top ||
-      event.clientY > bounds.bottom
-    ) {
-      errorDialog.close();
-    }
-  });
 }
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -50,12 +83,28 @@ function swapLogin(user) {
     navLogin.forEach((el) => el.classList.remove('logout-button'));
     navLogin.forEach((el) => el.classList.add('login-button'));
     navLogin.forEach((el) => el.classList.remove('auth-hidden'));
+    const password = document.getElementById('password');
+    password.textContent = 'Forgot Password?';
+    password.addEventListener('click', () =>
+      showPasswordDialogue(
+        "To reset your password, please visit Google's account recovery page.",
+        'https://accounts.google.com/signin/recovery?ec=ar_hc_7682439',
+      ),
+    );
   } else {
     const navLogin = document.querySelectorAll('.nav-login');
     navLogin.forEach((el) => (el.textContent = 'Logout'));
     navLogin.forEach((el) => el.classList.remove('login-button'));
     navLogin.forEach((el) => el.classList.add('logout-button'));
     navLogin.forEach((el) => el.classList.remove('auth-hidden'));
+    const password = document.getElementById('password');
+    password.textContent = 'Change Password?';
+    password.addEventListener('click', () =>
+      showPasswordDialogue(
+        "To change your password, please visit Google's account password change page.",
+        'https://myaccount.google.com/intro/signinoptions/password',
+      ),
+    );
   }
 }
 
@@ -73,10 +122,7 @@ async function login() {
   console.log('Signing in with Google...');
   try {
     await signInWithGoogle();
-  } catch (error) {
-    showErrorDialog('Error signing in with Google.');
-    console.error('Error signing in with Google:', error);
-  }
+  } catch (error) {}
 }
 
 // Helper Function for event listeners to handle logout

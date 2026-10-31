@@ -259,7 +259,18 @@
         &copy;2026 Andreas Diercks -
         <a href="mailto:ardierc2@go.olemiss.edu">ardierc2@go.olemiss.edu</a>
       </p>
+      <button class="button" id="password" type="button">Forgot Password?</button>
     </footer>
+
+    <dialog class="sign-in-dialog" id="password-dialog" aria-label="password-error-message">
+      <p id="password-error-message">
+        To reset your password, please visit Google's account recovery page.
+      </p>
+      <div class="sign-in-actions">
+        <button class="sign-in-cancel" id="close-password-message" type="button">Close</button>
+        <button class="button" id="continue-to-google" type="button">To Google Accounts</button>
+      </div>
+    </dialog>
 
     <script src="js/nav.js"></script>
     <script type="module" src="js/require-signed-in.js"></script>
