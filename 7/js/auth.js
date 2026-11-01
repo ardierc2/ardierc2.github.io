@@ -221,7 +221,14 @@ if (signInDialog) {
       await signInWithGoogle();
       window.location.assign(destination);
     } catch (error) {
-      console.error('Error signing in with Google:', error);
+      // User closed or replaced the popup: not an error worth showing
+      if (
+        error.code === 'auth/popup-closed-by-user' ||
+        error.code === 'auth/cancelled-popup-request'
+      ) {
+        return;
+      }
+      showErrorDialog(error.message);
     }
   });
 
