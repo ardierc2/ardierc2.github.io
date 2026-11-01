@@ -1,10 +1,9 @@
-import { signOutUser, signInWithGoogle } from '../firebase-config.js';
-import { auth } from '../firebase-config.js';
+import { signOutUser, signInWithGoogle, auth } from './firebase-config.js';
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //        Error dialog
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<
-function showErrorDialog(error) {
+export function showErrorDialog(error) {
   const errorDialog = document.getElementById('error-dialog');
   if (errorDialog) {
     errorDialog.getElementsByTagName('p')[0].textContent =
@@ -122,7 +121,16 @@ async function login() {
   console.log('Signing in with Google...');
   try {
     await signInWithGoogle();
-  } catch (error) {}
+  } catch (error) {
+    // User closed or replaced the popup: not an error worth showing
+    if (
+      error.code === 'auth/popup-closed-by-user' ||
+      error.code === 'auth/cancelled-popup-request'
+    ) {
+      return;
+    }
+    showErrorDialog(error.message);
+  }
 }
 
 // Helper Function for event listeners to handle logout
@@ -213,7 +221,14 @@ if (signInDialog) {
       await signInWithGoogle();
       window.location.assign(destination);
     } catch (error) {
-      console.error('Error signing in with Google:', error);
+      // User closed or replaced the popup: not an error worth showing
+      if (
+        error.code === 'auth/popup-closed-by-user' ||
+        error.code === 'auth/cancelled-popup-request'
+      ) {
+        return;
+      }
+      showErrorDialog(error.message);
     }
   });
 

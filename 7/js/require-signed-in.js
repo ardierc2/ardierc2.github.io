@@ -1,3 +1,3 @@
-import { requireSignedInUser } from '../firebase-config.js';
+import { requireSignedInUser } from './firebase-config.js';
 
 requireSignedInUser('index.html');

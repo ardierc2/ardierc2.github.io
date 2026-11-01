@@ -60,6 +60,11 @@ html {
   display: none;
 }
 
+#password {
+  background-color: transparent;
+  color: orange;
+}
+
 /* 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>
             Page 
@@ -1083,7 +1088,16 @@ footer {
   .two-step-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .two-step-card {
+    margin: 0 0 32px;
+  }
+
+  .two-step-card button {
+    width: 100%;
   }
 
   .two-step-card {
