@@ -4,7 +4,7 @@ import {
 } from 'https://www.gstatic.com/firebasejs/13.0.0/firebase-firestore.js';
 import { db } from './firebase-config.js';
 
-import { showErrorDialog } from 'auth.js';
+import { showErrorDialog } from './auth.js';
 
 // Fetching the environment data from the Firestore database.
 async function fetchEnvironment() {
@@ -252,6 +252,10 @@ async function init() {
 
   // Waiting for the environments data to be fetched before setting up the event listeners.
   const ENVIRONMENTS = await fetchEnvironment();
+  if (!ENVIRONMENTS || ENVIRONMENTS.length === 0) {
+    showErrorDialog('No environment data found.');
+    return;
+  }
   const CARDS = document.querySelectorAll('.two-step-card');
 
   // Adding click event listeners to each card for the two-step selection process.
