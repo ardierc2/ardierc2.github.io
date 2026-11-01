@@ -2,7 +2,9 @@ import {
   getDocs,
   collection,
 } from 'https://www.gstatic.com/firebasejs/13.0.0/firebase-firestore.js';
-import { db } from '../firebase-config.js';
+import { db } from './firebase-config.js';
+
+import { showErrorDialog } from 'auth.js';
 
 // Fetching the environment data from the Firestore database.
 async function fetchEnvironment() {

@@ -1,10 +1,9 @@
-import { signOutUser, signInWithGoogle } from '../firebase-config.js';
-import { auth } from '../firebase-config.js';
+import { signOutUser, signInWithGoogle, auth } from './firebase-config.js';
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //        Error dialog
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<
-function showErrorDialog(error) {
+export function showErrorDialog(error) {
   const errorDialog = document.getElementById('error-dialog');
   if (errorDialog) {
     errorDialog.getElementsByTagName('p')[0].textContent =
