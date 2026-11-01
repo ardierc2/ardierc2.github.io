@@ -121,7 +121,16 @@ async function login() {
   console.log('Signing in with Google...');
   try {
     await signInWithGoogle();
-  } catch (error) {}
+  } catch (error) {
+    // User closed or replaced the popup: not an error worth showing
+    if (
+      error.code === 'auth/popup-closed-by-user' ||
+      error.code === 'auth/cancelled-popup-request'
+    ) {
+      return;
+    }
+    showErrorDialog(error.message);
+  }
 }
 
 // Helper Function for event listeners to handle logout
