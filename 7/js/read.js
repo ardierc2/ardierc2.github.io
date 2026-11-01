@@ -27,6 +27,16 @@ let environmentIndex = -1;
 let selectedEnvironment;
 let animalSelectionDOM;
 
+// Snapshot of the environment step so it can be restored without reloading.
+const HERO_IMAGE_EL = document.querySelector('.hero-image');
+const ORIGINAL_STEP = {
+  title: document.title,
+  heroSrc: HERO_IMAGE_EL.getAttribute('src'),
+  heroAlt: HERO_IMAGE_EL.getAttribute('alt'),
+  heroTitle: document.querySelector('.hero-title').textContent,
+  cards: [...document.querySelectorAll('.two-step-card button')].map((b) => b.innerHTML),
+};
+
 // >>>>>>>>>>>>>
 //    Helpers
 // <<<<<<<<<<<<<
@@ -61,13 +71,30 @@ function addSectionBar(element) {
 // Back Button Functionality
 // <<<<<<<<<<<<<<<<<<<<<<<<<<
 
+// Restores the environment selection step
+function backToEnvironments() {
+  document.title = ORIGINAL_STEP.title;
+  HERO_IMAGE_EL.setAttribute('src', ORIGINAL_STEP.heroSrc);
+  HERO_IMAGE_EL.setAttribute('alt', ORIGINAL_STEP.heroAlt);
+  document.querySelector('.hero-title').textContent = ORIGINAL_STEP.heroTitle;
+
+  document.querySelectorAll('.two-step-card button').forEach((button, i) => {
+    button.innerHTML = ORIGINAL_STEP.cards[i];
+  });
+
+  isEnvironment = true;
+  environmentIndex = -1;
+  selectedEnvironment = undefined;
+  updateBackButton();
+}
+
 // Sets the back button functionality based on the current step.
 const BACK_BUTTON_ELEMENT = document.querySelector('#twoStep-back');
 BACK_BUTTON_ELEMENT.addEventListener('click', () => {
   if (isEnvironment) {
     window.location.href = 'index.html';
   } else {
-    window.location.reload();
+    backToEnvironments();
   }
 });
 
