@@ -16,7 +16,6 @@ async function fetchEnvironment() {
   }
 }
 
-// TODO: The rest
 // >>>>>>>>>>>>>>>>>>>>>>>>>>
 //   Two-Step Process State
 // <<<<<<<<<<<<<<<<<<<<<<<<<<

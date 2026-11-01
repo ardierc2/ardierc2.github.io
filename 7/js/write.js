@@ -44,6 +44,11 @@ function showErrorDialog(error) {
 // Add event listener for form submission
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
+
+  const submitbutton = document.getElementById('submit');
+  submitbutton.disabled = true;
+  submitbutton.value = 'Sending... ';
+
   await auth.authStateReady();
   if (!auth.currentUser) {
     showErrorDialog('Error: User not signed in.');
@@ -61,6 +66,9 @@ form.addEventListener('submit', async (event) => {
     showMessageSentDialog();
   } catch (error) {
     showErrorDialog();
+  } finally {
+    submitbutton.disabled = false;
+    submitbutton.value = 'Submit';
   }
 });
 
