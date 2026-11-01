@@ -49,13 +49,13 @@ form.addEventListener('submit', async (event) => {
   submitbutton.disabled = true;
   submitbutton.value = 'Sending... ';
 
-  await auth.authStateReady();
-  if (!auth.currentUser) {
-    showErrorDialog('Error: User not signed in.');
-    return;
-  }
-
   try {
+    await auth.authStateReady();
+    if (!auth.currentUser) {
+      showErrorDialog('Error: User not signed in.');
+      return;
+    }
+
     await addDoc(collection(db, 'contacts'), {
       name: nameField.value.trim(),
       email: emailField.value.trim(),
