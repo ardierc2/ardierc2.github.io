@@ -55,10 +55,12 @@ hr {
 
   align-self: center;
 
-  max-width: 900px;
-  height: 600px;
-  overflow-y: scroll;
   width: 100%;
+  max-width: 900px;
+  max-height: 650px;
+  overflow-y: scroll;
+
+  padding: 1em;
 }
 
 /* Old card style */
