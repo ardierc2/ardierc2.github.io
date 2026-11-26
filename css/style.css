@@ -58,9 +58,15 @@ hr {
   width: 100%;
   max-width: 900px;
   max-height: 650px;
-  overflow-y: scroll;
+  overflow-y: auto;
+  width: 100%;
 
-  padding: 1em;
+  gap: 12px;
+  padding: 1.25rem 1.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: #a9bb92 transparent;
+
+  mask-image: linear-gradient(to bottom, black calc(100% - 15px), transparent);
 }
 
 /* Old card style */
